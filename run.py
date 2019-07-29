@@ -13,6 +13,11 @@ import os
 
 import pandas as pd
 
+PATH = pathlib.Path(__file__).parent
+DATA_PATH = PATH.joinpath("data").resolve()
+
+
+df = pd.read_csv(DATA_PATH.joinpath('results_output_r_5runs_35716rows_balance_action.csv.csv'))
 
 server = Flask(__name__)
 server.secret_key = os.environ.get('secret_key', 'secret')
@@ -28,8 +33,9 @@ app.layout = html.Div(children=[
         id='example-graph',    
         figure={
             'data': [
-                {'x': [1, 2, 3], 'y': [4, 1, 2], 'type': 'bar', 'name': 'SF'},
-                {'x': [1, 2, 3], 'y': [2, 4, 5], 'type': 'bar', 'name': u'Montréal'},
+                {'x': df.eps.values, 'y': dp.auc.values, 'type': 'bar', 'name': 'SF'}
+#                 {'x': [1, 2, 3], 'y': [4, 1, 2], 'type': 'bar', 'name': 'SF'},
+#                 {'x': [1, 2, 3], 'y': [2, 4, 5], 'type': 'bar', 'name': u'Montréal'},
             ],
             'layout': {
                 'title': 'Dash Data Visualization'
