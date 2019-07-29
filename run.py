@@ -199,7 +199,7 @@ app.layout = html.Div(children=[
 # def update_output(value):
 #     return 'You have selected "{}"'.format(value)
 
-# callback for di vs auc
+# callback for overall auc
 @app.callback(
     dash.dependencies.Output('auc', 'figure'),
     [dash.dependencies.Input('dataset-name', 'value'),
@@ -228,7 +228,8 @@ def update_image_src(dataset_filename, dataset_options, xaxis_type):
                 size=20,
                 color='#7f7f7f'
                 ),
-                type ='linear' if xaxis_type == 'Linear' else 'log'
+                type ='linear' if xaxis_type == 'Linear' else 'log',
+                autorange='reversed'
 
             ),
             'yaxis' : dict(
@@ -293,18 +294,18 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
                 color='#7f7f7f'
                 )
             ),
-            'shape': [{type="rect",
-                        x0=0.1,
-                        y0=0.8,
-                        x1=2,
-                        y1=1.2,
-                        line=dict(
-                            color="RoyalBlue",
-                            width=2,
-                        ),
-                        fillcolor="LightSkyBlue",
-                    }
-                ],
+#             'shape': [{type="rect",
+#                         x0=0.1,
+#                         y0=0.8,
+#                         x1=2,
+#                         y1=1.2,
+#                         line=dict(
+#                             color="RoyalBlue",
+#                             width=2,
+#                         ),
+#                         fillcolor="LightSkyBlue",
+#                     }
+#                 ],
             'legend_orientation':"h",
             'legend':dict(x=-.1, y=-1.5)
         }
