@@ -258,15 +258,16 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
             dictionary = dataset_options[i]
             if dictionary['value'] == filename:
                 index = i
-    labelname=dataset_options[index]['label']
-    df = pd.read_csv(DATA_PATH.joinpath(filename))
-    
-    if 'approval' in metric_checklist:
-        data.append({'x': df.eps.values, 'y': df['mean_di_approval_race'].values, 'type': 'scatter', 'name': 'approval ({})'.format(labelname)})
-    if 'fn' in metric_checklist:
-        data.append({'x': df.eps.values, 'y': df['mean_di_fn_race'].values, 'type': 'line', 'name': 'fn'})
-    if 'fp' in metric_checklist:
-        data.append({'x': df.eps.values, 'y': df['mean_di_fp_race'].values, 'type': 'line', 'name': 'fp'})
+        labelname=dataset_options[index]['label']
+        df = pd.read_csv(DATA_PATH.joinpath(filename))
+
+        if 'approval' in metric_checklist:
+            data.append({'x': df.eps.values, 'y': df['mean_di_approval_race'].values, 'type': 'scatter', 'name': 'approval ({})'.format(labelname)})
+        if 'fn' in metric_checklist:
+            data.append({'x': df.eps.values, 'y': df['mean_di_fn_race'].values, 'type': 'line', 'name': 'fn'})
+        if 'fp' in metric_checklist:
+            data.append({'x': df.eps.values, 'y': df['mean_di_fp_race'].values, 'type': 'line', 'name': 'fp'})
+            
     figure = {
         'data': data,
         'layout': {
@@ -310,15 +311,16 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
             dictionary = dataset_options[i]
             if dictionary['value'] == filename:
                 index = i
-    labelname=dataset_options[index]['label']
-    df = pd.read_csv(DATA_PATH.joinpath(filename))
-    
-    if 'approval' in metric_checklist:
-        data.append({'x': df.eps.values, 'y': df['mean_di_approval_eth'].values, 'type': 'scatter', 'name': 'race'})
-    if 'fn' in metric_checklist:
-        data.append({'x': df.eps.values, 'y': df['mean_di_fn_eth'].values, 'type': 'line', 'name': 'fn'})
-    if 'fp' in metric_checklist:
-        data.append({'x': df.eps.values, 'y': df['mean_di_fp_eth'].values, 'type': 'line', 'name': 'fp'})
+        labelname=dataset_options[index]['label']
+        df = pd.read_csv(DATA_PATH.joinpath(filename))
+
+        if 'approval' in metric_checklist:
+            data.append({'x': df.eps.values, 'y': df['mean_di_approval_eth'].values, 'type': 'scatter', 'name': 'race'})
+        if 'fn' in metric_checklist:
+            data.append({'x': df.eps.values, 'y': df['mean_di_fn_eth'].values, 'type': 'line', 'name': 'fn'})
+        if 'fp' in metric_checklist:
+            data.append({'x': df.eps.values, 'y': df['mean_di_fp_eth'].values, 'type': 'line', 'name': 'fp'})
+            
     figure = {
         'data': data,
         'layout': {
@@ -362,15 +364,15 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
             dictionary = dataset_options[i]
             if dictionary['value'] == filename:
                 index = i
-    labelname=dataset_options[index]['label']
-    df = pd.read_csv(DATA_PATH.joinpath(filename))
-    
-    if 'approval' in metric_checklist:
-        data.append({'x': df.eps.values, 'y': df['mean_di_approval_sex'].values, 'type': 'scatter', 'name': 'race'})
-    if 'fn' in metric_checklist:
-        data.append({'x': df.eps.values, 'y': df['mean_di_fn_sex'].values, 'type': 'line', 'name': 'fn'})
-    if 'fp' in metric_checklist:
-        data.append({'x': df.eps.values, 'y': df['mean_di_fp_sex'].values, 'type': 'line', 'name': 'fp'})
+        labelname=dataset_options[index]['label']
+        df = pd.read_csv(DATA_PATH.joinpath(filename))
+
+        if 'approval' in metric_checklist:
+            data.append({'x': df.eps.values, 'y': df['mean_di_approval_sex'].values, 'type': 'scatter', 'name': 'race'})
+        if 'fn' in metric_checklist:
+            data.append({'x': df.eps.values, 'y': df['mean_di_fn_sex'].values, 'type': 'line', 'name': 'fn'})
+        if 'fp' in metric_checklist:
+            data.append({'x': df.eps.values, 'y': df['mean_di_fp_sex'].values, 'type': 'line', 'name': 'fp'})
     figure = {
         'data': data,
         'layout': {
