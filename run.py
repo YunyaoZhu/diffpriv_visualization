@@ -179,7 +179,7 @@ app.layout = html.Div(children=[
     html.Div(id='my-div')
 
 
-])
+], className='ten columns offset-by-one')
 
 '''Callbacks'''
 @app.callback(
