@@ -1,9 +1,18 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[ ]:
+
+
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
 from flask import Flask
 import os
+
+import pandas as pd
+
 
 server = Flask(__name__)
 server.secret_key = os.environ.get('secret_key', 'secret')
@@ -37,3 +46,4 @@ app.layout = html.Div(children=[
 )
 def update_output_div(input_value):
     return 'You\'ve entered "{}"'.format(input_value)
+
