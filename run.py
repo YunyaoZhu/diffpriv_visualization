@@ -150,7 +150,14 @@ app.layout = html.Div(children=[
             )  
 
 
-        ]),
+        ], className='five columns'),
+        
+        # AUC graph
+        html.Div([
+            dcc.Graph(
+                id='auc',
+            )], className='seven columns'),
+        
         
         
     ], className='row'),
