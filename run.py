@@ -19,7 +19,7 @@ PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("data").resolve()
 
 
-df = pd.read_csv('results_output_r_5runs_35716rows_balance_action.csv.csv'))
+df = pd.read_csv(DATA_PATH.joinpath('results_output_r_5runs_35716rows_balance_action.csv.csv'))
 
 '''Initialize Dash'''
 server = Flask(__name__)
