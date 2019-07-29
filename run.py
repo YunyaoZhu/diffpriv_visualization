@@ -101,13 +101,13 @@ app.layout = html.Div(children=[
         html.Div(id='output-container')
     ], className='row'),
     
-#     html.Div([
-#         # Control panel
-#         html.Div([
+    html.Div([
+        # Control panel
+        html.Div([
             
-#             html.P(
-#                 "Choose dataset:",
-#             ),
+            html.P(
+                "Choose dataset:",
+            ),
 
             
             
@@ -149,10 +149,10 @@ app.layout = html.Div(children=[
             
             
             
-#             ]),
+            ]),
         
         
-#         ], className='row'),
+        ], className='row'),
 
 
     
