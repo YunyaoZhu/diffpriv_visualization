@@ -135,7 +135,7 @@ app.layout = html.Div(children=[
                         {'label': 'Regression Balanced by Sex', 
                          'value': 'results_output_r_50runs_630450rows_balance_sex2019-07-22_19-31-25.csv'},
                         {'label': 'Regression Balanced by Action (test)', 
-                         'value': 'results_output_r_5runs_35716rows_balance_action.csv.csv')},],
+                         'value': 'results_output_r_5runs_35716rows_balance_action.csv.csv'},],
 
                 multi=True,
                 placeholder="Select a dataset",
