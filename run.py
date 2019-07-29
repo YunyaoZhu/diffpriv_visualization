@@ -86,18 +86,18 @@ app.layout = html.Div(children=[
         
     ], className='row'),
     
-    html.Div([
-        dcc.Dropdown(
-            id='my-dropdown',
-            options=[
-                {'label': 'New York City', 'value': 'NYC'},
-                {'label': 'Montreal', 'value': 'MTL'},
-                {'label': 'San Francisco', 'value': 'SF'}
-            ],
-            value='NYC'
-        ),
-        html.Div(id='output-container')
-    ], className='row'),
+#     html.Div([
+#         dcc.Dropdown(
+#             id='my-dropdown',
+#             options=[
+#                 {'label': 'New York City', 'value': 'NYC'},
+#                 {'label': 'Montreal', 'value': 'MTL'},
+#                 {'label': 'San Francisco', 'value': 'SF'}
+#             ],
+#             value='NYC'
+#         ),
+#         html.Div(id='output-container')
+#     ], className='row'),
     
     html.Div([
         # Control panel
@@ -162,31 +162,31 @@ app.layout = html.Div(children=[
         
     ], className='row'),
     
-    dcc.Graph(
-        id='example-graph',    
-        figure={
-            'data': [
-                {'x': df.eps.values, 'y': df.auc.values, 'type': 'bar', 'name': 'SF'}
-#                 {'x': [1, 2, 3], 'y': [4, 1, 2], 'type': 'bar', 'name': 'SF'},
-#                 {'x': [1, 2, 3], 'y': [2, 4, 5], 'type': 'bar', 'name': u'Montréal'},
-            ],
-            'layout': {
-                'title': 'Dash Data Visualization'
-            }
-        }
-    ),
-    dcc.Input(id='my-id', value='initial value', type="text"),
-    html.Div(id='my-div')
+#     dcc.Graph(
+#         id='example-graph',    
+#         figure={
+#             'data': [
+#                 {'x': df.eps.values, 'y': df.auc.values, 'type': 'bar', 'name': 'SF'}
+# #                 {'x': [1, 2, 3], 'y': [4, 1, 2], 'type': 'bar', 'name': 'SF'},
+# #                 {'x': [1, 2, 3], 'y': [2, 4, 5], 'type': 'bar', 'name': u'Montréal'},
+#             ],
+#             'layout': {
+#                 'title': 'Dash Data Visualization'
+#             }
+#         }
+#     ),
+#     dcc.Input(id='my-id', value='initial value', type="text"),
+#     html.Div(id='my-div')
 
 
 ], className='ten columns offset-by-one')
 
 '''Callbacks'''
-@app.callback(
-    dash.dependencies.Output('output-container', 'children'),
-    [dash.dependencies.Input('my-dropdown', 'value')])
-def update_output(value):
-    return 'You have selected "{}"'.format(value)
+# @app.callback(
+#     dash.dependencies.Output('output-container', 'children'),
+#     [dash.dependencies.Input('my-dropdown', 'value')])
+# def update_output(value):
+#     return 'You have selected "{}"'.format(value)
 
 # callback for di vs auc
 @app.callback(
