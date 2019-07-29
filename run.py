@@ -137,7 +137,8 @@ app.layout = html.Div(children=[
                 id = 'xaxis-type',
                 options=[{'label': i, 'value': i} for i in ['Log', 'Linear']],
                 value='Log',
-                labelStyle={'display': 'inline-block'}
+                labelStyle={'display': 'inline-block',
+                           'margin-top': 25}
             )  
 
 
@@ -293,7 +294,7 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
                 )
             ),
             'legend_orientation':"h",
-            'legend':dict(x=-.1, y=-0.6)
+            'legend':dict(x=-.1, y=-1.5)
         }
     }
     return figure
@@ -350,7 +351,7 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
                 )
             ),
             'legend_orientation':"h",
-            'legend':dict(x=-.1, y=-0.6)
+            'legend':dict(x=-.1, y=-1.5)
         }
     }
     return figure
@@ -402,7 +403,7 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
                 )
             ),
             'legend_orientation':"h",
-            'legend':dict(x=-.1, y=-0.6)
+            'legend':dict(x=-.1, y=-1.5)
         }
     }
     return figure
