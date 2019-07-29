@@ -287,7 +287,10 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
                 family='Helvetica, monospace',
                 size=20,
                 color='#7f7f7f'
-            ))
+                )
+            ),
+            'legend_orientation':"h",
+            'legend':dict(x=-.1, y=-0.6)
         }
     }
     return figure
@@ -341,8 +344,10 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
                 family='Helvetica, monospace',
                 size=20,
                 color='#7f7f7f'
-                
-            ))
+                )
+            ),
+            'legend_orientation':"h",
+            'legend':dict(x=-.1, y=-0.6)
         }
     }
     return figure
@@ -391,7 +396,10 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
                 family='Helvetica, monospace',
                 size=20,
                 color='#7f7f7f'
-            ))
+                )
+            ),
+            'legend_orientation':"h",
+            'legend':dict(x=-.1, y=-0.6)
         }
     }
     return figure
