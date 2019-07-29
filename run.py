@@ -101,15 +101,20 @@ app.layout = html.Div(children=[
         html.Div(id='output-container')
     ], className='row'),
     
-    html.Div([
-        # Control panel
-        html.Div([
+#     html.Div([
+#         # Control panel
+#         html.Div([
             
-            html.P(
-                "Choose dataset:",
-#                 className="control_label",
-            ),
-        
+#             html.P(
+#                 "Choose dataset:",
+#             ),
+
+            
+            
+            
+            
+            
+            
 #             dcc.Dropdown(
 #                 id="dataset-name",
 #                  options=[{'label': 'Neural Net Balanced by Action', 
@@ -141,10 +146,13 @@ app.layout = html.Div(children=[
 #                 placeholder="Select a dataset",
 # #                 className="dcc_control",
 #             ),
-            ]),
+            
+            
+            
+#             ]),
         
         
-        ], className='row'),
+#         ], className='row'),
 
 
     
