@@ -188,3 +188,49 @@ app.layout = html.Div(children=[
 def update_output(value):
     return 'You have selected "{}"'.format(value)
 
+# callback for di vs auc
+@app.callback(
+    dash.dependencies.Output('auc', 'figure'),
+    [dash.dependencies.Input('dataset-name', 'value'),
+     dash.dependencies.Input('dataset-name', 'options'),
+     dash.dependencies.Input('xaxis-type', 'value')])
+def update_image_src(dataset_filename, dataset_options, xaxis_type):
+    data = []
+    for filename in dataset_filename:
+        index = len(dataset_options)-1
+        for i in range(len(dataset_options)):
+            dictionary = dataset_options[i]
+            if dictionary['value'] == filename:
+                index = i
+        labelname=dataset_options[index]['label']
+#         df = pd.read_csv(DATA_PATH.joinpath(filename))
+        data.append({'x': df.eps.values, 'y': df.auc.values, 'type': 'scatter', 'name': labelname})
+        
+    figure = {
+        'data': data,
+        'layout': {
+            'title': 'Overall AUC',
+            'xaxis' : dict(
+                title='Epsilons',
+                titlefont=dict(
+                family='Helvetica, monospace',
+                size=20,
+                color='#7f7f7f'
+                ),
+                type ='linear' if xaxis_type == 'Linear' else 'log'
+
+            ),
+            'yaxis' : dict(
+                title='AUC',
+                titlefont=dict(
+                family='Helvetica, monospace',
+                size=20,
+                color='#7f7f7f'),
+            ),
+            'legend_orientation':"h",
+            'legend':dict(x=-.1, y=-0.6)
+            
+        }
+    }
+    return figure
+
