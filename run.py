@@ -267,11 +267,11 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
         df = pd.read_csv(DATA_PATH.joinpath(filename))
 
         if 'approval' in metric_checklist:
-            data.append({'x': df.eps.values, 'y': df['mean_di_approval_race'].values, 'type': 'line', 'name': 'Approval DI \n({})'.format(labelname)})
+            data.append({'x': df.eps.values, 'y': df['mean_di_approval_race'].values, 'type': 'line', 'name': 'Approval DI \n ({})'.format(labelname)})
         if 'fn' in metric_checklist:
-            data.append({'x': df.eps.values, 'y': df['mean_di_fn_race'].values, 'type': 'line', 'name': 'False Negative DI \n({})'.format(labelname)})
+            data.append({'x': df.eps.values, 'y': df['mean_di_fn_race'].values, 'type': 'line', 'name': 'False Negative DI \n ({})'.format(labelname)})
         if 'fp' in metric_checklist:
-            data.append({'x': df.eps.values, 'y': df['mean_di_fp_race'].values, 'type': 'line', 'name': 'False Positive DI \n({})'.format(labelname)})
+            data.append({'x': df.eps.values, 'y': df['mean_di_fp_race'].values, 'type': 'line', 'name': 'False Positive DI \n ({})'.format(labelname)})
             
     figure = {
         'data': data,
@@ -281,7 +281,7 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
                 title='Epsilons',
                 titlefont=dict(
                 family='Helvetica, monospace',
-                size=10,
+                size=15,
                 color='#7f7f7f'
                 ),
                 type ='linear' if xaxis_type == 'Linear' else 'log',
@@ -291,7 +291,7 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
                 title='DI',
                 titlefont=dict(
                 family='Helvetica, monospace',
-                size=10,
+                size=15,
                 color='#7f7f7f'
                 )
             ),
@@ -336,11 +336,11 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
         df = pd.read_csv(DATA_PATH.joinpath(filename))
 
         if 'approval' in metric_checklist:
-            data.append({'x': df.eps.values, 'y': df['mean_di_approval_eth'].values, 'type': 'line', 'name': 'Approval DI \n({})'.format(labelname)})
+            data.append({'x': df.eps.values, 'y': df['mean_di_approval_eth'].values, 'type': 'line', 'name': 'Approval DI \n ({})'.format(labelname)})
         if 'fn' in metric_checklist:
-            data.append({'x': df.eps.values, 'y': df['mean_di_fn_eth'].values, 'type': 'line', 'name': 'False Negative DI \n({})'.format(labelname)})
+            data.append({'x': df.eps.values, 'y': df['mean_di_fn_eth'].values, 'type': 'line', 'name': 'False Negative DI \n ({})'.format(labelname)})
         if 'fp' in metric_checklist:
-            data.append({'x': df.eps.values, 'y': df['mean_di_fp_eth'].values, 'type': 'line', 'name': 'False Positive DI \n({})'.format(labelname)})
+            data.append({'x': df.eps.values, 'y': df['mean_di_fp_eth'].values, 'type': 'line', 'name': 'False Positive DI \n ({})'.format(labelname)})
             
     figure = {
         'data': data,
@@ -350,7 +350,7 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
                 title='Epsilons',
                 titlefont=dict(
                 family='Helvetica, monospace',
-                size=10,
+                size=15,
                 color='#7f7f7f'
                 ),
                 type ='linear' if xaxis_type == 'Linear' else 'log',
@@ -361,7 +361,7 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
                 title='DI',
                 titlefont=dict(
                 family='Helvetica, monospace',
-                size=10,
+                size=15,
                 color='#7f7f7f'
                 )
             ),
@@ -392,11 +392,11 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
         df = pd.read_csv(DATA_PATH.joinpath(filename))
 
         if 'approval' in metric_checklist:
-            data.append({'x': df.eps.values, 'y': df['mean_di_approval_sex'].values, 'type': 'scatter', 'name': 'Approval DI \n({})'.format(labelname)})
+            data.append({'x': df.eps.values, 'y': df['mean_di_approval_sex'].values, 'type': 'scatter', 'name': 'Approval DI \n ({})'.format(labelname)})
         if 'fn' in metric_checklist:
-            data.append({'x': df.eps.values, 'y': df['mean_di_fn_sex'].values, 'type': 'line', 'name': 'False Negative DI \n({})'.format(labelname)})
+            data.append({'x': df.eps.values, 'y': df['mean_di_fn_sex'].values, 'type': 'line', 'name': 'False Negative DI \n ({})'.format(labelname)})
         if 'fp' in metric_checklist:
-            data.append({'x': df.eps.values, 'y': df['mean_di_fp_sex'].values, 'type': 'line', 'name': 'False Positive DI \n({})'.format(labelname)})
+            data.append({'x': df.eps.values, 'y': df['mean_di_fp_sex'].values, 'type': 'line', 'name': 'False Positive DI \n ({})'.format(labelname)})
     figure = {
         'data': data,
         'layout': {
@@ -405,7 +405,7 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
                 title='Epsilons',
                 titlefont=dict(
                 family='Helvetica, monospace',
-                size=10,
+                size=15,
                 color='#7f7f7f'),
                 type ='linear' if xaxis_type == 'Linear' else 'log',
                 autorange='reversed'
@@ -414,7 +414,7 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
                 title='DI',
                 titlefont=dict(
                 family='Helvetica, monospace',
-                size=10,
+                size=15,
                 color='#7f7f7f'
                 )
             ),
