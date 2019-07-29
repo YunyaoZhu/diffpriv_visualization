@@ -175,19 +175,19 @@ app.layout = html.Div(children=[
                 "x-axis type:",
 #                 className="control_label",
             ),
-            dcc.RadioItems(
-                id = 'xaxis-type',
-                options=[{'label': i, 'value': i} for i in ['Log', 'Linear']],
-                value='Log',
-                labelStyle={'display': 'inline-block'}
-            )  
+#             dcc.RadioItems(
+#                 id = 'xaxis-type',
+#                 options=[{'label': i, 'value': i} for i in ['Log', 'Linear']],
+#                 value='Log',
+#                 labelStyle={'display': 'inline-block'}
+#             )  
             
             
             
-            ]),
+        ]),
         
         
-        ], className='row'),
+    ], className='row'),
 
 
     
