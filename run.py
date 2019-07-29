@@ -168,6 +168,22 @@ app.layout = html.Div(children=[
         ], className='four columns'),
         
     ], className='row'),
+    
+    
+    
+    # checklist (di metrics)
+    html.Div([
+        dcc.Checklist(
+            id = 'metric-checklist',
+            options=[
+                {'label': 'Approval', 'value': 'approval'},
+                {'label': 'False Negative', 'value': 'fn'},
+                {'label': 'False Positive', 'value': 'fp'}
+            ],
+            values=['approval'],
+            labelStyle={'display': 'inline-block'}
+        ) 
+    ], className='container-fluid'),
 
 
 ], className='ten columns offset-by-one')
