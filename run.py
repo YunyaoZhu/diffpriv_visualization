@@ -203,7 +203,7 @@ def update_image_src(dataset_filename, dataset_options, xaxis_type):
             if dictionary['value'] == filename:
                 index = i
         labelname=dataset_options[index]['label']
-#         df = pd.read_csv(DATA_PATH.joinpath(filename))
+        df = pd.read_csv(DATA_PATH.joinpath(filename))
         data.append({'x': df.eps.values, 'y': df.auc.values, 'type': 'scatter', 'name': labelname})
         
     figure = {
