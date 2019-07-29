@@ -138,6 +138,17 @@ app.layout = html.Div(children=[
                 multi=True,
                 placeholder="Select a dataset",
             ),
+            
+            html.P(
+                "x-axis type:",
+            ),
+            dcc.RadioItems(
+                id = 'xaxis-type',
+                options=[{'label': i, 'value': i} for i in ['Log', 'Linear']],
+                value='Log',
+                labelStyle={'display': 'inline-block'}
+            )  
+
 
         ]),
         
