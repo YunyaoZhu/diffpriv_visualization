@@ -183,8 +183,8 @@ app.layout = html.Div(children=[
                 {'label': 'False Positive', 'value': 'fp'}
             ],
             values=['approval'],
-            style={'margin-top': 20},
-            labelStyle={'display': 'inline-block'}
+            labelStyle={'display': 'inline-block',
+                       'margin-top': 20}
         ) 
     ], className='container-fluid'),
 
