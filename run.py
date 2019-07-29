@@ -246,9 +246,11 @@ def update_image_src(dataset_filename, dataset_options, xaxis_type):
 # callback for race di
 @app.callback(
     dash.dependencies.Output('race_di', 'figure'),
-    [dash.dependencies.Input('metric-checklist', 'values'), 
+    [dash.dependencies.Input('dataset-name', 'value'),
+     dash.dependencies.Input('dataset-name', 'options'),
+     dash.dependencies.Input('metric-checklist', 'values'), 
      dash.dependencies.Input('xaxis-type', 'value')])
-def update_image_src(metric_checklist, xaxis_type):
+def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_type):
     data = []
     for filename in dataset_filename:
     index = len(dataset_options)-1
@@ -260,7 +262,7 @@ def update_image_src(metric_checklist, xaxis_type):
     df = pd.read_csv(DATA_PATH.joinpath(filename))
     
     if 'approval' in metric_checklist:
-        data.append({'x': df.eps.values, 'y': df['mean_di_approval_race'].values, 'type': 'scatter', 'name': 'race'})
+        data.append({'x': df.eps.values, 'y': df['mean_di_approval_race'].values, 'type': 'scatter', 'name': 'approval'})
     if 'fn' in metric_checklist:
         data.append({'x': df.eps.values, 'y': df['mean_di_fn_race'].values, 'type': 'line', 'name': 'fn'})
     if 'fp' in metric_checklist:
