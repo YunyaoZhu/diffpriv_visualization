@@ -99,7 +99,7 @@ app.layout = html.Div(children=[
             value='NYC'
         ),
         html.Div(id='output-container')
-    ])
+    ], className='row')
 
 
     
