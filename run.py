@@ -110,29 +110,29 @@ app.layout = html.Div(children=[
             dcc.Dropdown(
                 id="dataset-name",
                  options=[{'label': 'Neural Net Balanced by Action', 
-                          'value': DATA_PATH.joinpath('results_nn_4states_balanced_action_cv_output.csv.csv')},
+                          'value': 'results_nn_4states_balanced_action_cv_output.csv.csv'},
                         {'label': 'Neural Net Balanced by Action+Race', 
-                         'value': DATA_PATH.joinpath('results_nn_4states_balanced_action_race_cv_output.csv.csv')},
+                         'value': 'results_nn_4states_balanced_action_race_cv_output.csv.csv'},
                         {'label': 'Neural Net Balanced by Race', 
-                         'value': DATA_PATH.joinpath('results_nn_4states_balanced_race_cv_output.csv.csv')},
+                         'value': 'results_nn_4states_balanced_race_cv_output.csv.csv'},
                         {'label': 'Neural Net Balanced by Ethnicity', 
-                         'value': DATA_PATH.joinpath('results_nn_4states_balanced_ethni_cv_output.csv.csv')},
+                         'value': 'results_nn_4states_balanced_ethni_cv_output.csv.csv'},
                         {'label': 'Neural Net Balanced by Sex', 
-                         'value': DATA_PATH.joinpath('results_nn_4states_balanced_sex_cv_output.csv.csv')},
+                         'value': 'results_nn_4states_balanced_sex_cv_output.csv.csv'},
                         {'label': 'Regression Balanced by Action', 
-                         'value': DATA_PATH.joinpath('results_output_r_50runs_357160rows_balance_action2019-07-23_10-44-00.csv')},
+                         'value': 'results_output_r_50runs_357160rows_balance_action2019-07-23_10-44-00.csv'},
                         {'label': 'Regression Balanced by Action (non-binarized)', 
-                         'value': DATA_PATH.joinpath('results_output_r_50runs_357160rows_balance_action_default_reg2019-07-26_14-51-32.csv')},
+                         'value': 'results_output_r_50runs_357160rows_balance_action_default_reg2019-07-26_14-51-32.csv'},
                         {'label': 'Regression Balanced by Action+Race', 
-                         'value': DATA_PATH.joinpath('results_output_r_50runs_209040rows_balance_action_race2019-07-22_17-43-09.csv')},
+                         'value': 'results_output_r_50runs_209040rows_balance_action_race2019-07-22_17-43-09.csv'},
                         {'label': 'Regression Balanced by Race', 
-                         'value': DATA_PATH.joinpath('results_output_r_50runs_322142rows_balance_race2019-07-22_17-56-07.csv')},
+                         'value': 'results_output_r_50runs_322142rows_balance_race2019-07-22_17-56-07.csv'},
                         {'label': 'Regression Balanced by Ethnicity', 
-                         'value': DATA_PATH.joinpath('results_output_r_50runs_99684rows_balance_ethni2019-07-22_17-19-46.csv')},
+                         'value': 'results_output_r_50runs_99684rows_balance_ethni2019-07-22_17-19-46.csv'},
                         {'label': 'Regression Balanced by Sex', 
-                         'value': DATA_PATH.joinpath('results_output_r_50runs_630450rows_balance_sex2019-07-22_19-31-25.csv')},
+                         'value': 'results_output_r_50runs_630450rows_balance_sex2019-07-22_19-31-25.csv'},
                         {'label': 'Regression Balanced by Action (test)', 
-                         'value': DATA_PATH.joinpath('results_output_r_5runs_35716rows_balance_action.csv.csv')},],
+                         'value': 'results_output_r_5runs_35716rows_balance_action.csv.csv'},],
 
 
                 multi=True,
@@ -143,6 +143,22 @@ app.layout = html.Div(children=[
         
         
     ], className='row'),
+    
+    dcc.Graph(
+        id='example-graph',    
+        figure={
+            'data': [
+                {'x': df.eps.values, 'y': df.auc.values, 'type': 'bar', 'name': 'SF'}
+#                 {'x': [1, 2, 3], 'y': [4, 1, 2], 'type': 'bar', 'name': 'SF'},
+#                 {'x': [1, 2, 3], 'y': [2, 4, 5], 'type': 'bar', 'name': u'Montréal'},
+            ],
+            'layout': {
+                'title': 'Dash Data Visualization'
+            }
+        }
+    ),
+    dcc.Input(id='my-id', value='initial value', type="text"),
+    html.Div(id='my-div')
 
 
 ])
