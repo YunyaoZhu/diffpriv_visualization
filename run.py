@@ -109,12 +109,6 @@ app.layout = html.Div(children=[
                 "Choose dataset:",
             ),
 
-            
-            
-            
-            
-            
-            
             dcc.Dropdown(
                 id="dataset-name",
 #                  options=[{'label': 'Neural Net Balanced by Action', 
@@ -171,10 +165,9 @@ app.layout = html.Div(children=[
 #                 className="dcc_control",
             ),
             
-            html.P(
-                "x-axis type:",
-#                 className="control_label",
-            ),
+#             html.P(
+#                 "x-axis type:",
+#             ),
 #             dcc.RadioItems(
 #                 id = 'xaxis-type',
 #                 options=[{'label': i, 'value': i} for i in ['Log', 'Linear']],
