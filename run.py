@@ -19,7 +19,7 @@ PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("data").resolve()
 
 
-df = pd.read_csv(DATA_PATH.joinpath('results_output_r_5runs_35716rows_balance_action.csv.csv'))
+df_test = pd.read_csv(DATA_PATH.joinpath('results_output_r_5runs_35716rows_balance_action.csv.csv'))
 
 '''Initialize Dash'''
 server = Flask(__name__)
@@ -293,6 +293,18 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
                 color='#7f7f7f'
                 )
             ),
+            'shapes': [{type="rect",
+                        x0=0.1,
+                        y0=0.8,
+                        x1=2,
+                        y1=1.2,
+                        line=dict(
+                            color="RoyalBlue",
+                            width=2,
+                        ),
+                        fillcolor="LightSkyBlue",
+                    }
+                ],
             'legend_orientation':"h",
             'legend':dict(x=-.1, y=-1.5)
         }
