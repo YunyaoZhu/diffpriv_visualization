@@ -241,3 +241,122 @@ def update_image_src(dataset_filename, dataset_options, xaxis_type):
     }
     return figure
 
+
+# callback for race di
+@app.callback(
+    dash.dependencies.Output('race_di', 'figure'),
+    [dash.dependencies.Input('metric-checklist', 'values'), 
+     dash.dependencies.Input('xaxis-type', 'value')])
+def update_image_src(metric_checklist, xaxis_type):
+    data = []
+    if 'approval' in metric_checklist:
+        data.append({'x': df.eps.values, 'y': df['mean_di_approval_race'].values, 'type': 'scatter', 'name': 'race'})
+    if 'fn' in metric_checklist:
+        data.append({'x': df.eps.values, 'y': df['mean_di_fn_race'].values, 'type': 'line', 'name': 'fn'})
+    if 'fp' in metric_checklist:
+        data.append({'x': df.eps.values, 'y': df['mean_di_fp_race'].values, 'type': 'line', 'name': 'fp'})
+    figure = {
+        'data': data,
+        'layout': {
+            'title': 'Race Disparate Impact',
+            'xaxis' : dict(
+                title='Epsilons',
+                titlefont=dict(
+                family='Helvetica, monospace',
+                size=20,
+                color='#7f7f7f'
+                ),
+                type ='linear' if xaxis_type == 'Linear' else 'log'
+            ),
+            'yaxis' : dict(
+                title='DI',
+                titlefont=dict(
+                family='Helvetica, monospace',
+                size=20,
+                color='#7f7f7f'
+            ))
+        }
+    }
+    return figure
+
+
+
+
+
+# callback for ethnicity di
+@app.callback(
+    dash.dependencies.Output('eth_di', 'figure'),
+    [dash.dependencies.Input('metric-checklist', 'values'), 
+     dash.dependencies.Input('xaxis-type', 'value')])
+def update_image_src(metric_checklist, xaxis_type):
+    data = []
+    if 'approval' in metric_checklist:
+        data.append({'x': df.eps.values, 'y': df['mean_di_approval_eth'].values, 'type': 'scatter', 'name': 'race'})
+    if 'fn' in metric_checklist:
+        data.append({'x': df.eps.values, 'y': df['mean_di_fn_eth'].values, 'type': 'line', 'name': 'fn'})
+    if 'fp' in metric_checklist:
+        data.append({'x': df.eps.values, 'y': df['mean_di_fp_eth'].values, 'type': 'line', 'name': 'fp'})
+    figure = {
+        'data': data,
+        'layout': {
+            'title': 'Ethnicity Disparate Impact',
+            'xaxis' : dict(
+                title='Epsilons',
+                titlefont=dict(
+                family='Helvetica, monospace',
+                size=20,
+                color='#7f7f7f'
+                ),
+                type ='linear' if xaxis_type == 'Linear' else 'log'
+
+            ),
+            'yaxis' : dict(
+                title='DI',
+                titlefont=dict(
+                family='Helvetica, monospace',
+                size=20,
+                color='#7f7f7f'
+                
+            ))
+        }
+    }
+    return figure
+
+
+
+# callback for gender di
+@app.callback(
+    dash.dependencies.Output('sex_di', 'figure'),
+    [dash.dependencies.Input('metric-checklist', 'values'), 
+     dash.dependencies.Input('xaxis-type', 'value')])
+def update_image_src(metric_checklist, xaxis_type):
+    data = []
+    if 'approval' in metric_checklist:
+        data.append({'x': df.eps.values, 'y': df['mean_di_approval_sex'].values, 'type': 'scatter', 'name': 'race'})
+    if 'fn' in metric_checklist:
+        data.append({'x': df.eps.values, 'y': df['mean_di_fn_sex'].values, 'type': 'line', 'name': 'fn'})
+    if 'fp' in metric_checklist:
+        data.append({'x': df.eps.values, 'y': df['mean_di_fp_sex'].values, 'type': 'line', 'name': 'fp'})
+    figure = {
+        'data': data,
+        'layout': {
+            'title': 'Gender Disparate Impact',
+            'xaxis' : dict(
+                title='Epsilons',
+                titlefont=dict(
+                family='Helvetica, monospace',
+                size=20,
+                color='#7f7f7f'),
+                type ='linear' if xaxis_type == 'Linear' else 'log'
+            ),
+            'yaxis' : dict(
+                title='DI',
+                titlefont=dict(
+                family='Helvetica, monospace',
+                size=20,
+                color='#7f7f7f'
+            ))
+        }
+    }
+    return figure
+
