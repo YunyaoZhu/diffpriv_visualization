@@ -132,13 +132,13 @@ app.layout = html.Div(children=[
             
             html.P(
                 "x-axis type:",
+                style={'margin-top': 25}
             ),
             dcc.RadioItems(
                 id = 'xaxis-type',
                 options=[{'label': i, 'value': i} for i in ['Log', 'Linear']],
                 value='Log',
-                labelStyle={'display': 'inline-block',
-                           'margin-top': 25}
+                labelStyle={'display': 'inline-block'}
             )  
 
 
