@@ -253,16 +253,16 @@ def update_image_src(dataset_filename, dataset_options, xaxis_type):
 def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_type):
     data = []
     for filename in dataset_filename:
-    index = len(dataset_options)-1
-    for i in range(len(dataset_options)):
-        dictionary = dataset_options[i]
-        if dictionary['value'] == filename:
-            index = i
+        index = len(dataset_options)-1
+        for i in range(len(dataset_options)):
+            dictionary = dataset_options[i]
+            if dictionary['value'] == filename:
+                index = i
     labelname=dataset_options[index]['label']
     df = pd.read_csv(DATA_PATH.joinpath(filename))
     
     if 'approval' in metric_checklist:
-        data.append({'x': df.eps.values, 'y': df['mean_di_approval_race'].values, 'type': 'scatter', 'name': 'approval'})
+        data.append({'x': df.eps.values, 'y': df['mean_di_approval_race'].values, 'type': 'scatter', 'name': 'approval ({})'.format(labelname)})
     if 'fn' in metric_checklist:
         data.append({'x': df.eps.values, 'y': df['mean_di_fn_race'].values, 'type': 'line', 'name': 'fn'})
     if 'fp' in metric_checklist:
