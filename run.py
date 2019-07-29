@@ -86,18 +86,7 @@ app.layout = html.Div(children=[
         
     ], className='row'),
     
-#     html.Div([
-#         dcc.Dropdown(
-#             id='my-dropdown',
-#             options=[
-#                 {'label': 'New York City', 'value': 'NYC'},
-#                 {'label': 'Montreal', 'value': 'MTL'},
-#                 {'label': 'San Francisco', 'value': 'SF'}
-#             ],
-#             value='NYC'
-#         ),
-#         html.Div(id='output-container')
-#     ], className='row'),
+
     
     html.Div([
         # Control panel
@@ -162,21 +151,23 @@ app.layout = html.Div(children=[
         
     ], className='row'),
     
-#     dcc.Graph(
-#         id='example-graph',    
-#         figure={
-#             'data': [
-#                 {'x': df.eps.values, 'y': df.auc.values, 'type': 'bar', 'name': 'SF'}
-# #                 {'x': [1, 2, 3], 'y': [4, 1, 2], 'type': 'bar', 'name': 'SF'},
-# #                 {'x': [1, 2, 3], 'y': [2, 4, 5], 'type': 'bar', 'name': u'Montréal'},
-#             ],
-#             'layout': {
-#                 'title': 'Dash Data Visualization'
-#             }
-#         }
-#     ),
-#     dcc.Input(id='my-id', value='initial value', type="text"),
-#     html.Div(id='my-div')
+    
+    # DI for race, ethnicity, and sex
+    html.Div([
+        
+        html.Div([
+            dcc.Graph(id='race_di')
+        ], className='four columns'),
+        
+        html.Div([
+            dcc.Graph(id='eth_di',)
+        ], className='four columns'),
+        
+        html.Div([
+            dcc.Graph(id='sex_di')
+        ], className='four columns'),
+        
+    ], className='row'),
 
 
 ], className='ten columns offset-by-one')
