@@ -139,11 +139,6 @@ app.layout = html.Div(children=[
                 multi=True,
                 placeholder="Select a dataset",
 #                 className="dcc_control",
-                style={
-                    'margin-bottom': 20,
-                    'autosize': True,
-#                     'height': 42
-                }
             ),
             ], className='five columns'),
         ], className='row'),
