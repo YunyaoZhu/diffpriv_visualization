@@ -19,7 +19,7 @@ PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("data").resolve()
 
 
-df = pd.read_csv(DATA_PATH.joinpath('results_output_r_5runs_35716rows_balance_action.csv.csv'))
+df = pd.read_csv('results_output_r_5runs_35716rows_balance_action.csv.csv'))
 
 '''Initialize Dash'''
 server = Flask(__name__)
@@ -112,30 +112,31 @@ app.layout = html.Div(children=[
         
             dcc.Dropdown(
                 id="dataset-name",
-                options=[{'label': 'Neural Net Balanced by Action', 
-                          'value': DATA_PATH.joinpath('results_nn_4states_balanced_action_cv_output.csv.csv')},
+                 options=[{'label': 'Neural Net Balanced by Action', 
+                          'value': 'results_nn_4states_balanced_action_cv_output.csv.csv'},
                         {'label': 'Neural Net Balanced by Action+Race', 
-                         'value': DATA_PATH.joinpath('results_nn_4states_balanced_action_race_cv_output.csv.csv')},
+                         'value': 'results_nn_4states_balanced_action_race_cv_output.csv.csv'},
                         {'label': 'Neural Net Balanced by Race', 
-                         'value': DATA_PATH.joinpath('results_nn_4states_balanced_race_cv_output.csv.csv')},
+                         'value': 'results_nn_4states_balanced_race_cv_output.csv.csv'},
                         {'label': 'Neural Net Balanced by Ethnicity', 
-                         'value': DATA_PATH.joinpath('results_nn_4states_balanced_ethni_cv_output.csv.csv')},
+                         'value': 'results_nn_4states_balanced_ethni_cv_output.csv.csv'},
                         {'label': 'Neural Net Balanced by Sex', 
-                         'value': DATA_PATH.joinpath('results_nn_4states_balanced_sex_cv_output.csv.csv')},
+                         'value': 'results_nn_4states_balanced_sex_cv_output.csv.csv'},
                         {'label': 'Regression Balanced by Action', 
-                         'value': DATA_PATH.joinpath('results_output_r_50runs_357160rows_balance_action2019-07-23_10-44-00.csv')},
+                         'value': 'results_output_r_50runs_357160rows_balance_action2019-07-23_10-44-00.csv'},
                         {'label': 'Regression Balanced by Action (non-binarized)', 
-                         'value': DATA_PATH.joinpath('results_output_r_50runs_357160rows_balance_action_default_reg2019-07-26_14-51-32.csv')},
+                         'value': 'results_output_r_50runs_357160rows_balance_action_default_reg2019-07-26_14-51-32.csv'},
                         {'label': 'Regression Balanced by Action+Race', 
-                         'value': DATA_PATH.joinpath('results_output_r_50runs_209040rows_balance_action_race2019-07-22_17-43-09.csv')},
+                         'value': 'results_output_r_50runs_209040rows_balance_action_race2019-07-22_17-43-09.csv'},
                         {'label': 'Regression Balanced by Race', 
-                         'value': DATA_PATH.joinpath('results_output_r_50runs_322142rows_balance_race2019-07-22_17-56-07.csv')},
+                         'value': 'results_output_r_50runs_322142rows_balance_race2019-07-22_17-56-07.csv'},
                         {'label': 'Regression Balanced by Ethnicity', 
-                         'value': DATA_PATH.joinpath('results_output_r_50runs_99684rows_balance_ethni2019-07-22_17-19-46.csv')},
+                         'value': 'results_output_r_50runs_99684rows_balance_ethni2019-07-22_17-19-46.csv'},
                         {'label': 'Regression Balanced by Sex', 
-                         'value': DATA_PATH.joinpath('results_output_r_50runs_630450rows_balance_sex2019-07-22_19-31-25.csv')},
+                         'value': 'results_output_r_50runs_630450rows_balance_sex2019-07-22_19-31-25.csv'},
                         {'label': 'Regression Balanced by Action (test)', 
-                         'value': DATA_PATH.joinpath('results_output_r_5runs_35716rows_balance_action.csv.csv')},],
+                         'value': 'results_output_r_5runs_35716rows_balance_action.csv.csv')},],
+
                 multi=True,
                 placeholder="Select a dataset",
 #                 className="dcc_control",
