@@ -67,7 +67,7 @@ app.layout = html.Div(children=[
                     'color': colors['title'],
                     'margin-top': 0,
                     'font-family': 'Helvetica, monospace',
-                    'font-size': 20
+                    'font-size': 30
                     },
                 )
         ], className='eight columns'),
@@ -125,7 +125,8 @@ app.layout = html.Div(children=[
 
 
                 multi=True,
-                placeholder="Select a dataset",
+                value='results_output_r_5runs_35716rows_balance_action.csv.csv'
+#                 placeholder="Select a dataset",
             ),
             
             html.P(
