@@ -293,7 +293,7 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
                 color='#7f7f7f'
                 )
             ),
-            'shapes': [{type="rect",
+            'shape': [{type="rect",
                         x0=0.1,
                         y0=0.8,
                         x1=2,
