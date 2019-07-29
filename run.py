@@ -350,10 +350,21 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
 # callback for gender di
 @app.callback(
     dash.dependencies.Output('sex_di', 'figure'),
-    [dash.dependencies.Input('metric-checklist', 'values'), 
+    [dash.dependencies.Input('dataset-name', 'value'),
+     dash.dependencies.Input('dataset-name', 'options'),
+     dash.dependencies.Input('metric-checklist', 'values'), 
      dash.dependencies.Input('xaxis-type', 'value')])
-def update_image_src(metric_checklist, xaxis_type):
+def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_type):
     data = []
+    for filename in dataset_filename:
+        index = len(dataset_options)-1
+        for i in range(len(dataset_options)):
+            dictionary = dataset_options[i]
+            if dictionary['value'] == filename:
+                index = i
+    labelname=dataset_options[index]['label']
+    df = pd.read_csv(DATA_PATH.joinpath(filename))
+    
     if 'approval' in metric_checklist:
         data.append({'x': df.eps.values, 'y': df['mean_di_approval_sex'].values, 'type': 'scatter', 'name': 'race'})
     if 'fn' in metric_checklist:
