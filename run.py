@@ -66,8 +66,9 @@ app.layout = html.Div(children=[
                     'textAlign': 'center',
                     'color': colors['title'],
                     'margin-top': 0,
+                    'margin-bottom': 30,
                     'font-family': 'Helvetica, monospace',
-                    'font-size': 30
+                    'font-size': 20
                     },
                 )
         ], className='eight columns'),
@@ -182,6 +183,7 @@ app.layout = html.Div(children=[
                 {'label': 'False Positive', 'value': 'fp'}
             ],
             values=['approval'],
+            style={'margin-top': 20,}
             labelStyle={'display': 'inline-block'}
         ) 
     ], className='container-fluid'),
