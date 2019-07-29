@@ -110,7 +110,7 @@ app.layout = html.Div(children=[
             dcc.Dropdown(
                 id="dataset-name",
                  options=[{'label': 'Neural Net Balanced by Action', 
-                          'value': DATA_PATH.joinpath('results_nn_4states_balanced_action_cv_output.csv.csv')},
+                          'value': 'results_nn_4states_balanced_action_cv_output.csv.csv'},
                         {'label': 'Neural Net Balanced by Action+Race', 
                          'value': 'results_nn_4states_balanced_action_race_cv_output.csv.csv'},
                         {'label': 'Neural Net Balanced by Race', 
