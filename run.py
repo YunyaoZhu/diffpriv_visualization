@@ -281,16 +281,17 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
                 title='Epsilons',
                 titlefont=dict(
                 family='Helvetica, monospace',
-                size=20,
+                size=10,
                 color='#7f7f7f'
                 ),
-                type ='linear' if xaxis_type == 'Linear' else 'log'
+                type ='linear' if xaxis_type == 'Linear' else 'log',
+                autorange='reversed'
             ),
             'yaxis' : dict(
                 title='DI',
                 titlefont=dict(
                 family='Helvetica, monospace',
-                size=20,
+                size=10,
                 color='#7f7f7f'
                 )
             ),
@@ -349,17 +350,18 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
                 title='Epsilons',
                 titlefont=dict(
                 family='Helvetica, monospace',
-                size=20,
+                size=10,
                 color='#7f7f7f'
                 ),
-                type ='linear' if xaxis_type == 'Linear' else 'log'
+                type ='linear' if xaxis_type == 'Linear' else 'log',
+                autorange='reversed'
 
             ),
             'yaxis' : dict(
                 title='DI',
                 titlefont=dict(
                 family='Helvetica, monospace',
-                size=20,
+                size=10,
                 color='#7f7f7f'
                 )
             ),
@@ -403,15 +405,16 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
                 title='Epsilons',
                 titlefont=dict(
                 family='Helvetica, monospace',
-                size=20,
+                size=10,
                 color='#7f7f7f'),
-                type ='linear' if xaxis_type == 'Linear' else 'log'
+                type ='linear' if xaxis_type == 'Linear' else 'log',
+                autorange='reversed'
             ),
             'yaxis' : dict(
                 title='DI',
                 titlefont=dict(
                 family='Helvetica, monospace',
-                size=20,
+                size=10,
                 color='#7f7f7f'
                 )
             ),
