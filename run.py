@@ -253,6 +253,20 @@ app.layout = html.Div(children=[
 #     return 'You have selected "{}"'.format(value)
 
 # callback for overall auc
+
+@app.callback(Output('tabs-content', 'children'),
+              [Input('tabs', 'value')])
+def render_content(tab):
+    if tab == 'tab-1':
+        return html.Div([
+            html.H3('Tab content 1')
+        ])
+    elif tab == 'tab-2':
+        return html.Div([
+            html.H3('Tab content 2')
+        ])
+    
+    
 @app.callback(
     dash.dependencies.Output('auc', 'figure'),
     [dash.dependencies.Input('dataset-name', 'value'),
