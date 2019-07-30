@@ -31,13 +31,13 @@ app.config.supress_callback_exceptions = True
 
 '''Define colors'''
 colors = {
-    'background': '#F7F9ED',
+    'background': '#F8FBF9',
     'title': '#02140F',
     'text': '#00A676'
 }
 
 '''App layout'''
-app.layout = html.Div(style={'backgroundColor': colors['background']}, children=[
+app.layout = html.Div(children=[
     # title row
     html.Div([
         html.Div([
@@ -89,7 +89,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
     
 
     
-    html.Div([
+    html.Div(style={'backgroundColor': colors['background']}, children=[
         # Control panel
         html.Div([
             
@@ -316,7 +316,7 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
 #                     }
 #                 ],
             'legend_orientation':"h",
-            'legend':dict(x=-.5, y=-1.5)
+            'legend':dict(x=-1.5, y=-1.5)
         }
     }
     return figure
@@ -374,7 +374,7 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
                 )
             ),
             'legend_orientation':"h",
-            'legend':dict(x=-.5, y=-1.5)
+            'legend':dict(x=-1.5, y=-1.5)
         }
     }
     return figure
@@ -427,7 +427,7 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
                 )
             ),
             'legend_orientation':"h",
-            'legend':dict(x=-.5, y=-1.5)
+            'legend':dict(x=-1.5, y=-1.5)
         }
     }
     return figure
