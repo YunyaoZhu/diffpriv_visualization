@@ -92,26 +92,20 @@ app.layout = html.Div(children=[
     
     html.Div([
         # Control panel
-        html.Div(style={'backgroundColor': colors['white'], 'padding-left': 20, 'padding-top': 20}, children=[
+        html.Div(style={
+#                         'backgroundColor': colors['white'], 
+#                         'padding-left': 20, 
+#                         'padding-top': 20
+                       }, 
+                 children=[
             
             
-#             dcc.Tab(
-#                 label='Interactions',
-#                 value='control-tab-select2',
-#                 children=html.Div(className='control-tab', children=[
+            dcc.Tabs(
+                id="tabs-example", value='tab-1-example', children=[
+                dcc.Tab(label='Tab One', value='tab-1-example'),
+                dcc.Tab(label='Tab Two', value='tab-2-example'),
+            ]),
 
-#                                 html.Div(
-#                                     className='app-controls-name',
-#                                     children='Event Metadata'
-#                                 ),
-#                                 html.P('Hover or click on data to see it here.'),
-#                                 html.Div(
-#                                     id='alignment-events'
-#                                 )
-#                 ]),
-#             ),
-            
-            
             
             
             html.P(
