@@ -231,7 +231,8 @@ def render_content(tab):
             html.P(
                 "Disparate impact (DI) is the ratio between the probability \
                 of an event happening to the protected group and the probability \
-                of this event happening to the unprotected group.",
+                of this event happening to the unprotected group. \n
+                By law the DI value should be between 0.8 and 1.2, with 1 being the optimal fairness.",
                 style={'font-family': 'Helvetica, monospace',
                       'font-size': 16}
             ),
