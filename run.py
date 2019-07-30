@@ -32,6 +32,7 @@ app.config.supress_callback_exceptions = True
 '''Define colors'''
 colors = {
     'background': '#F8FBF9',
+    'white': '#ffffff'
     'title': '#02140F',
     'text': '#00A676'
 }
@@ -91,7 +92,7 @@ app.layout = html.Div(children=[
     
     html.Div([
         # Control panel
-        html.Div(style={'backgroundColor': colors['background'], 'padding-left': 20, 'padding-top': 20}, children=[
+        html.Div(style={'backgroundColor': colors['white'], 'padding-left': 20, 'padding-top': 20}, children=[
             
             
 #             dcc.Tab(
