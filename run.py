@@ -100,10 +100,12 @@ app.layout = html.Div(children=[
                  children=[
             
             
-            dcc.Tabs(
-                id="tabs-example", value='tab-1-example', children=[
-                dcc.Tab(label='Tab One', value='tab-1-example'),
-                dcc.Tab(label='Tab Two', value='tab-2-example'),
+            html.Div([
+                dcc.Tabs(id="tabs", value='tab-1', children=[
+                    dcc.Tab(label='Tab one', value='tab-1'),
+                    dcc.Tab(label='Tab two', value='tab-2'),
+                ]),
+                html.Div(id='tabs-content')
             ]),
 
             
@@ -277,7 +279,7 @@ def update_image_src(dataset_filename, dataset_options, xaxis_type):
                 title='Epsilons',
                 titlefont=dict(
                 family='Helvetica, monospace',
-                size=10,
+                size=15,
                 color='#7f7f7f'
                 ),
                 type ='linear' if xaxis_type == 'Linear' else 'log',
@@ -288,7 +290,7 @@ def update_image_src(dataset_filename, dataset_options, xaxis_type):
                 title='AUC',
                 titlefont=dict(
                 family='Helvetica, monospace',
-                size=10,
+                size=15,
                 color='#7f7f7f'),
             ),
             'legend_orientation':"h",
