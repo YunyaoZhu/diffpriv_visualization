@@ -226,7 +226,7 @@ app.layout = html.Div(children=[
 #     ], className='container-fluid'),
 
 
-])#, className='ten columns offset-by-one-half column')
+], className='ten columns offset-by-one')
 
 '''Callbacks'''
 # @app.callback(
@@ -256,12 +256,13 @@ def update_image_src(dataset_filename, dataset_options, xaxis_type):
     figure = {
         'data': data,
         'layout': {
+            'height': 500,
             'title': 'Overall AUC',
             'xaxis' : dict(
                 title='Epsilons',
                 titlefont=dict(
                 family='Helvetica, monospace',
-                size=20,
+                size=10,
                 color='#7f7f7f'
                 ),
                 type ='linear' if xaxis_type == 'Linear' else 'log',
@@ -272,7 +273,7 @@ def update_image_src(dataset_filename, dataset_options, xaxis_type):
                 title='AUC',
                 titlefont=dict(
                 family='Helvetica, monospace',
-                size=20,
+                size=10,
                 color='#7f7f7f'),
             ),
             'legend_orientation':"h",
