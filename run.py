@@ -186,11 +186,19 @@ app.layout = html.Div(children=[
 def render_content(tab):
     if tab == 'tab-1':
         return html.Div(style={'padding-top': 20}, children=[
-            html.P(
-                "Choose dataset:",
+#             html.P(
+#                 "Choose dataset:",
+#                 style={'font-family': 'Helvetica, monospace',
+#                       'font-size': 20,
+#                       'font-weight': 'bold'}
+#             ),
+            html.H6(
+                'Choose dataset(s)',
                 style={'font-family': 'Helvetica, monospace',
                       'font-size': 20,
-                      'font-weight': 'bold'}
+#                       'font-weight': 'bold'
+                      }
+                
             ),
 
             dcc.Dropdown(
@@ -226,13 +234,23 @@ def render_content(tab):
                 placeholder="Select dataset(s)",
             ),
             
-            html.P(
-                "x-axis type:",
-                style={'margin-top': 25,
-                      'font-family': 'Helvetica, monospace',
+#             html.P(
+#                 "x-axis type:",
+#                 style={'margin-top': 25,
+#                       'font-family': 'Helvetica, monospace',
+#                       'font-size': 20,
+#                       'font-weight': 'bold'}
+#             ),
+            
+            html.H6(
+                'x-axis type:',
+                style={'font-family': 'Helvetica, monospace',
                       'font-size': 20,
-                      'font-weight': 'bold'}
+#                       'font-weight': 'bold'
+                      }
+                
             ),
+            
             dcc.RadioItems(
                 id = 'xaxis-type',
                 options=[{'label': i, 'value': i} for i in ['Log', 'Linear']],
@@ -241,12 +259,20 @@ def render_content(tab):
                            'font-family': 'Helvetica, monospace',
                           'font-size': 20}
             ),
-            html.P(
-                "Disparte impact metric:",
-                style={'margin-top': 25,
-                      'font-family': 'Helvetica, monospace',
+#             html.P(
+#                 "Disparte impact metric:",
+#                 style={'margin-top': 25,
+#                       'font-family': 'Helvetica, monospace',
+#                       'font-size': 20,
+#                       'font-weight': 'bold'}
+#             ),
+            html.H6(
+                'Disparte impact metric:',
+                style={'font-family': 'Helvetica, monospace',
                       'font-size': 20,
-                      'font-weight': 'bold'}
+#                       'font-weight': 'bold'
+                      }
+                
             ),
             dcc.Checklist(
                 id = 'metric-checklist',
@@ -262,7 +288,7 @@ def render_content(tab):
             )
         ])
     elif tab == 'tab-2':
-        return html.Div([
+        return html.Div(style={'padding-top': 20}, children=[
             html.H6(
                 'AUC',
                 style={'font-family': 'Helvetica, monospace',
@@ -287,6 +313,13 @@ def render_content(tab):
 #                       'font-weight': 'bold'
                       }
                 
+            ),
+            html.P(
+                "Disparate impact is the ratio between the probability \
+                of an event happening to the protected group and the probability \
+                of this event happening to the unprotected group.",
+                style={'font-family': 'Helvetica, monospace',
+                      'font-size': 15}
             ),
         ])
     
