@@ -266,7 +266,7 @@ def render_content(tab):
             html.H6(
                 'AUC',
                 style={'font-family': 'Helvetica, monospace',
-#                       'font-size': 20,
+                      'font-size': 20,
 #                       'font-weight': 'bold'
                       }
                 
@@ -277,8 +277,16 @@ def render_content(tab):
                 AUC is the area between the ROC curve and the x-axis. \
                 The closer AUC is to 1, the better the model utility.",
                 style={'font-family': 'Helvetica, monospace',
+                      'font-size': 15}
+            ),
+            
+            html.H6(
+                'Disparate Impact',
+                style={'font-family': 'Helvetica, monospace',
                       'font-size': 20,
-                      'font-weight': 'bold'}
+#                       'font-weight': 'bold'
+                      }
+                
             ),
         ])
     
