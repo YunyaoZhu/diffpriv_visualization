@@ -198,7 +198,7 @@ app.layout = html.Div(children=[
     ], className='container-fluid'),
 
 
-], className='eleven columns offset-by-one-half')
+], className='ten columns offset-by-one-half column')
 
 '''Callbacks'''
 # @app.callback(
