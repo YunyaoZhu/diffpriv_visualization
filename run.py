@@ -284,6 +284,7 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
     figure = {
         'data': data,
         'layout': {
+            'margin': dict(l=0, r=0, b=0, t=0, pad=0),
             'title': 'Race Disparate Impact',
             'xaxis' : dict(
                 title='Epsilons',
