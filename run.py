@@ -145,7 +145,26 @@ app.layout = html.Div(children=[
                 labelStyle={'display': 'inline-block',
                            'font-family': 'Helvetica, monospace',
                           'font-size': 20}
-            )  
+            ),
+            html.P(
+                "Disparte impact metric:",
+                style={'margin-top': 25,
+                      'font-family': 'Helvetica, monospace',
+                      'font-size': 20}
+            ),
+            dcc.Checklist(
+                id = 'metric-checklist',
+                options=[
+                    {'label': 'Approval', 'value': 'approval'},
+                    {'label': 'False Negative', 'value': 'fn'},
+                    {'label': 'False Positive', 'value': 'fp'}
+                ],
+                values=['approval'],
+                labelStyle={'display': 'inline-block',
+                           'margin-top': 20,
+                            'font-family': 'Helvetica, monospace',
+                              'font-size': 20}
+            ) 
 
 
         ], className='five columns'),
@@ -188,21 +207,21 @@ app.layout = html.Div(children=[
     
     
     # checklist (di metrics)
-    html.Div([
-        dcc.Checklist(
-            id = 'metric-checklist',
-            options=[
-                {'label': 'Approval', 'value': 'approval'},
-                {'label': 'False Negative', 'value': 'fn'},
-                {'label': 'False Positive', 'value': 'fp'}
-            ],
-            values=['approval'],
-            labelStyle={'display': 'inline-block',
-                       'margin-top': 20,
-                        'font-family': 'Helvetica, monospace',
-                          'font-size': 20}
-        ) 
-    ], className='container-fluid'),
+#     html.Div([
+#         dcc.Checklist(
+#             id = 'metric-checklist',
+#             options=[
+#                 {'label': 'Approval', 'value': 'approval'},
+#                 {'label': 'False Negative', 'value': 'fn'},
+#                 {'label': 'False Positive', 'value': 'fp'}
+#             ],
+#             values=['approval'],
+#             labelStyle={'display': 'inline-block',
+#                        'margin-top': 20,
+#                         'font-family': 'Helvetica, monospace',
+#                           'font-size': 20}
+#         ) 
+#     ], className='container-fluid'),
 
 
 ])#, className='ten columns offset-by-one-half column')
