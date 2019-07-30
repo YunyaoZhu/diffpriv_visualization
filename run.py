@@ -246,6 +246,7 @@ def render_content(tab):
                 'x-axis type:',
                 style={'font-family': 'Helvetica, monospace',
                       'font-size': 20,
+                       'margin-top': 10,
 #                       'font-weight': 'bold'
                       }
                 
@@ -269,7 +270,8 @@ def render_content(tab):
             html.H6(
                 'Disparte impact metric:',
                 style={'font-family': 'Helvetica, monospace',
-                      'font-size': 16,
+                      'font-size': 20,
+                       'margin-top': 10,
 #                       'font-weight': 'bold'
                       }
                 
@@ -303,13 +305,14 @@ def render_content(tab):
                 AUC is the area between the ROC curve and the x-axis. \
                 The closer AUC is to 1, the better the model utility.",
                 style={'font-family': 'Helvetica, monospace',
-                      'font-size': 18}
+                      'font-size': 16}
             ),
             
             html.H6(
                 'Disparate Impact',
                 style={'font-family': 'Helvetica, monospace',
                       'font-size': 20,
+                       'margin-top': 10,
 #                       'font-weight': 'bold'
                       }
                 
@@ -319,20 +322,20 @@ def render_content(tab):
                 of an event happening to the protected group and the probability \
                 of this event happening to the unprotected group.",
                 style={'font-family': 'Helvetica, monospace',
-                      'font-size': 18}
+                      'font-size': 16}
             ),
             
             html.Ul([html.Li('In Approval DI, the event is getting approval for a loan',
                             style={'font-family': 'Helvetica, monospace',
-                      'font-size': 18}),
+                      'font-size': 16}),
                     html.Li('In False Negative DI, the event is \
                             qualifying for a loan, but predicted by the model to be denied',
                            style={'font-family': 'Helvetica, monospace',
-                      'font-size': 18}),
+                      'font-size': 16}),
                     html.Li('In False Positive DI, the event is \
                             not qualifying for a loan, but predicted by the model to be approved',
                            style={'font-family': 'Helvetica, monospace',
-                      'font-size': 18})
+                      'font-size': 16})
                     
             ])
             
