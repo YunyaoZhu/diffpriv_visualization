@@ -89,7 +89,7 @@ app.layout = html.Div(children=[
     
 
     
-    html.Div(style={'backgroundColor': colors['background'], 'padding': ['25px', '20px', '25px', '25px']}, children=[
+    html.Div(style={'backgroundColor': colors['background'], 'padding-left': 20}, children=[
         # Control panel
         html.Div([
             
