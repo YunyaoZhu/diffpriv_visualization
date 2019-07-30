@@ -303,7 +303,7 @@ def render_content(tab):
                 AUC is the area between the ROC curve and the x-axis. \
                 The closer AUC is to 1, the better the model utility.",
                 style={'font-family': 'Helvetica, monospace',
-                      'font-size': 15}
+                      'font-size': 18}
             ),
             
             html.H6(
@@ -319,8 +319,10 @@ def render_content(tab):
                 of an event happening to the protected group and the probability \
                 of this event happening to the unprotected group.",
                 style={'font-family': 'Helvetica, monospace',
-                      'font-size': 15}
+                      'font-size': 18}
             ),
+            
+            html.Ul([html.Li('1.this is')])
         ])
     
     
