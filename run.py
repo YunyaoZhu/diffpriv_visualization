@@ -246,7 +246,7 @@ def render_content(tab):
                 'x-axis type:',
                 style={'font-family': 'Helvetica, monospace',
                       'font-size': 20,
-                       'margin-top': 10,
+                       'margin-top': 30,
 #                       'font-weight': 'bold'
                       }
                 
@@ -271,7 +271,7 @@ def render_content(tab):
                 'Disparte impact metric:',
                 style={'font-family': 'Helvetica, monospace',
                       'font-size': 20,
-                       'margin-top': 10,
+                       'margin-top': 30,
 #                       'font-weight': 'bold'
                       }
                 
@@ -312,7 +312,7 @@ def render_content(tab):
                 'Disparate Impact',
                 style={'font-family': 'Helvetica, monospace',
                       'font-size': 20,
-                       'margin-top': 10,
+                       'margin-top': 20,
 #                       'font-weight': 'bold'
                       }
                 
