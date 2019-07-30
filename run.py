@@ -96,7 +96,8 @@ app.layout = html.Div(children=[
             html.P(
                 "Choose dataset:",
                 style={'font-family': 'Helvetica, monospace',
-                      'font-size': 20}
+                      'font-size': 20,
+                      'font-weight': 'bold'}
             ),
 
             dcc.Dropdown(
@@ -128,15 +129,16 @@ app.layout = html.Div(children=[
 
 
                 multi=True,
-                value='results_output_r_5runs_35716rows_balance_action.csv.csv'
-#                 placeholder="Select a dataset",
+#                 value='results_output_r_5runs_35716rows_balance_action.csv.csv'
+                placeholder="Select dataset(s)",
             ),
             
             html.P(
                 "x-axis type:",
                 style={'margin-top': 25,
                       'font-family': 'Helvetica, monospace',
-                      'font-size': 20}
+                      'font-size': 20,
+                      'font-weight': 'bold'}
             ),
             dcc.RadioItems(
                 id = 'xaxis-type',
@@ -150,7 +152,8 @@ app.layout = html.Div(children=[
                 "Disparte impact metric:",
                 style={'margin-top': 25,
                       'font-family': 'Helvetica, monospace',
-                      'font-size': 20}
+                      'font-size': 20,
+                      'font-weight': 'bold'}
             ),
             dcc.Checklist(
                 id = 'metric-checklist',
@@ -161,7 +164,6 @@ app.layout = html.Div(children=[
                 ],
                 values=['approval'],
                 labelStyle={'display': 'inline-block',
-                           'margin-top': 20,
                             'font-family': 'Helvetica, monospace',
                               'font-size': 20}
             ) 
