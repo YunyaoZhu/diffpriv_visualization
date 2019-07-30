@@ -202,7 +202,7 @@ def render_content(tab):
                               'font-size': 16}
             )
         ])
-    elif tab == 'tab-2':
+    if tab == 'tab-2':
         return html.Div(style={'padding-top': 20, 'font-family': 'Helvetica, monospace',}, children=[
             html.H6(
                 'AUC',
