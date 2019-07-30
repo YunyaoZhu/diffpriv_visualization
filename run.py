@@ -263,7 +263,23 @@ def render_content(tab):
         ])
     elif tab == 'tab-2':
         return html.Div([
-            html.H3('Tab content 2')
+            html.H6(
+                'AUC',
+                style={'font-family': 'Helvetica, monospace',
+#                       'font-size': 20,
+#                       'font-weight': 'bold'
+                      }
+                
+            ),
+            html.P(
+                "AUC is the area under the ROC curve. \
+                The ROC curve is the receiver operating characteristic curve. \
+                AUC is the area between the ROC curve and the x-axis. \
+                The closer AUC is to 1, the better the model utility.",
+                style={'font-family': 'Helvetica, monospace',
+                      'font-size': 20,
+                      'font-weight': 'bold'}
+            ),
         ])
     
     
