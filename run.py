@@ -322,12 +322,15 @@ def render_content(tab):
                       'font-size': 18}
             ),
             
-            dcc.Markdown('''
-                1. In *Approval DI*, the event is **getting approval for a loan**
-                2. In *False Negative DI*, the event is **qualifying for a loan, but predicted by the model to be denied**
-                3. In *False Positive DI*, the event is **not qualifying for a loan, but predicted by the model to be approved**
-                '''
-            )
+            html.Ul([html.Li('In *Approval DI*, the event is **getting approval for a loan**'),
+                    html.Li('In *False Negative DI*, the event is \
+                            **qualifying for a loan, but predicted by the model to be denied**'),
+                    html.Li('In *False Positive DI*, the event is \
+                            **not qualifying for a loan, but predicted by the model to be approved**')
+                    
+            ])
+            
+
         ])
     
     
