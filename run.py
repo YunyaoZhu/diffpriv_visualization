@@ -89,7 +89,7 @@ app.layout = html.Div(children=[
     
 
     
-    html.Div(style={'backgroundColor': colors['background']}, children=[
+    html.Div(style={'backgroundColor': colors['background'], 'padding': ['25px', '20px', '25px', '25px']}, children=[
         # Control panel
         html.Div([
             
@@ -277,7 +277,7 @@ def update_image_src(dataset_filename, dataset_options, xaxis_type):
                 color='#7f7f7f'),
             ),
             'legend_orientation':"h",
-            'legend':dict(x=-.1, y=-0.6)
+            'legend':dict(x=-0, y=-0.8)
             
         }
     }
