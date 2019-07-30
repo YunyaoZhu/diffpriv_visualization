@@ -316,7 +316,7 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
 #                     }
 #                 ],
             'legend_orientation':"h",
-            'legend':dict(x=-.1, y=-1.5)
+            'legend':dict(x=-.5, y=-1.5)
         }
     }
     return figure
@@ -374,7 +374,7 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
                 )
             ),
             'legend_orientation':"h",
-            'legend':dict(x=-.1, y=-1.5)
+            'legend':dict(x=-.5, y=-1.5)
         }
     }
     return figure
@@ -427,7 +427,7 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
                 )
             ),
             'legend_orientation':"h",
-            'legend':dict(x=-.1, y=-1.5)
+            'legend':dict(x=-.5, y=-1.5)
         }
     }
     return figure
