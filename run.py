@@ -322,11 +322,17 @@ def render_content(tab):
                       'font-size': 18}
             ),
             
-            html.Ul([html.Li('In *Approval DI*, the event is **getting approval for a loan**'),
+            html.Ul([html.Li('In *Approval DI*, the event is **getting approval for a loan**',
+                            style={'font-family': 'Helvetica, monospace',
+                      'font-size': 18}),
                     html.Li('In *False Negative DI*, the event is \
-                            **qualifying for a loan, but predicted by the model to be denied**'),
+                            **qualifying for a loan, but predicted by the model to be denied**',
+                           style={'font-family': 'Helvetica, monospace',
+                      'font-size': 18}),
                     html.Li('In *False Positive DI*, the event is \
-                            **not qualifying for a loan, but predicted by the model to be approved**')
+                            **not qualifying for a loan, but predicted by the model to be approved**',
+                           style={'font-family': 'Helvetica, monospace',
+                      'font-size': 18})
                     
             ])
             
