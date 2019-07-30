@@ -31,7 +31,7 @@ app.config.supress_callback_exceptions = True
 
 '''Define colors'''
 colors = {
-    'background': '#111111',
+    'background': '#D4DF9E',
     'title': '#02140F',
     'text': '#00A676'
 }
@@ -89,7 +89,7 @@ app.layout = html.Div(children=[
     
 
     
-    html.Div([
+    html.Div(style={'backgroundColor': colors['background']},children=[
         # Control panel
         html.Div([
             
@@ -198,7 +198,7 @@ app.layout = html.Div(children=[
     ], className='container-fluid'),
 
 
-], className='ten columns offset-by-one-half column')
+])#, className='ten columns offset-by-one-half column')
 
 '''Callbacks'''
 # @app.callback(
