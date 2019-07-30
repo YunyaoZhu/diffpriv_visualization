@@ -155,17 +155,11 @@ app.layout = html.Div(children=[
             dcc.Graph(
                 id='auc',
             ),
-            html.Div([
-                dcc.Graph(id='race_di')
-            ], className='four columns'),
+           dcc.Graph(id='race_di'),
 
-            html.Div([
-                dcc.Graph(id='eth_di',)
-            ], className='four columns'),
+           dcc.Graph(id='eth_di'),
 
-            html.Div([
-                dcc.Graph(id='sex_di')
-            ], className='four columns'),
+           dcc.Graph(id='sex_di'),
 
         ], className='seven columns'),
         
