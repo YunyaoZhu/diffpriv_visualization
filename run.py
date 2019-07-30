@@ -319,7 +319,7 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
 #                     }
 #                 ],
             'legend_orientation':"h",
-            'legend':dict(x=0, y=-1)
+            'legend':dict(x=0, y=-0.8)
         }
     }
     return figure
@@ -356,6 +356,7 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
     figure = {
         'data': data,
         'layout': {
+            'height': 500,
             'title': 'Ethnicity Disparate Impact',
             'xaxis' : dict(
                 title='Epsilons',
@@ -377,7 +378,7 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
                 )
             ),
             'legend_orientation':"h",
-            'legend':dict(x=0, y=-1)
+            'legend':dict(x=0, y=-0.8)
         }
     }
     return figure
@@ -411,6 +412,7 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
     figure = {
         'data': data,
         'layout': {
+            'height': 500,
             'title': 'Gender Disparate Impact',
             'xaxis' : dict(
                 title='Epsilons',
@@ -430,7 +432,7 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
                 )
             ),
             'legend_orientation':"h",
-            'legend':dict(x=0, y=-1)
+            'legend':dict(x=0, y=-0.8)
         }
     }
     return figure
