@@ -285,7 +285,7 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
         'data': data,
         'layout': {
 #             'margin': dict(l=0, r=0, b=0, t=0, pad=0),
-            'height': 250,
+            'height': 500,
 #              'margin': { l: 5, r: 5, b: 5, t: 5, pad: 10},
             'title': 'Race Disparate Impact',
             'xaxis' : dict(
