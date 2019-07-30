@@ -38,7 +38,7 @@ colors = {
 }
 
 '''App layout'''
-app.layout = html.Div(children=[
+app.layout = html.Div(style={'font-family': 'Helvetica, monospace'}, children=[
     # title row
     html.Div([
         html.Div([
