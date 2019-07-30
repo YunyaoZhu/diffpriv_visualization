@@ -32,7 +32,7 @@ app.config.supress_callback_exceptions = True
 '''Define colors'''
 colors = {
     'background': '#F8FBF9',
-    'white': '#ffffff'
+    'white': '#ffffff',
     'title': '#02140F',
     'text': '#00A676'
 }
