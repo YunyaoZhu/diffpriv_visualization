@@ -154,7 +154,20 @@ app.layout = html.Div(children=[
         html.Div([
             dcc.Graph(
                 id='auc',
-            )], className='seven columns'),
+            ),
+            html.Div([
+                dcc.Graph(id='race_di')
+            ], className='four columns'),
+
+            html.Div([
+                dcc.Graph(id='eth_di',)
+            ], className='four columns'),
+
+            html.Div([
+                dcc.Graph(id='sex_di')
+            ], className='four columns'),
+
+        ], className='seven columns'),
         
         
         
@@ -162,21 +175,21 @@ app.layout = html.Div(children=[
     
     
     # DI for race, ethnicity, and sex
-    html.Div([
+#     html.Div([
         
-        html.Div([
-            dcc.Graph(id='race_di')
-        ], className='four columns'),
+#         html.Div([
+#             dcc.Graph(id='race_di')
+#         ], className='four columns'),
         
-        html.Div([
-            dcc.Graph(id='eth_di',)
-        ], className='four columns'),
+#         html.Div([
+#             dcc.Graph(id='eth_di',)
+#         ], className='four columns'),
         
-        html.Div([
-            dcc.Graph(id='sex_di')
-        ], className='four columns'),
+#         html.Div([
+#             dcc.Graph(id='sex_di')
+#         ], className='four columns'),
         
-    ], className='row'),
+#     ], className='row'),
     
     
     
