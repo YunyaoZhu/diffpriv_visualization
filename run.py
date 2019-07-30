@@ -269,7 +269,7 @@ def render_content(tab):
             html.H6(
                 'Disparte impact metric:',
                 style={'font-family': 'Helvetica, monospace',
-                      'font-size': 20,
+                      'font-size': 16,
 #                       'font-weight': 'bold'
                       }
                 
@@ -284,7 +284,7 @@ def render_content(tab):
                 values=['approval'],
                 labelStyle={'display': 'inline-block',
                             'font-family': 'Helvetica, monospace',
-                              'font-size': 20}
+                              'font-size': 16}
             )
         ])
     elif tab == 'tab-2':
@@ -315,14 +315,19 @@ def render_content(tab):
                 
             ),
             html.P(
-                "Disparate impact is the ratio between the probability \
+                "Disparate impact (DI) is the ratio between the probability \
                 of an event happening to the protected group and the probability \
                 of this event happening to the unprotected group.",
                 style={'font-family': 'Helvetica, monospace',
                       'font-size': 18}
             ),
             
-            html.Ul([html.Li('1.this is')])
+            dcc.Markdown('''
+                1. In *Approval DI*, the event is **getting approval for a loan**
+                2. In *False Negative DI*, the event is **qualifying for a loan, but predicted by the model to be denied**
+                3. In *False Positive DI*, the event is **not qualifying for a loan, but predicted by the model to be approved**
+                '''
+            )
         ])
     
     
