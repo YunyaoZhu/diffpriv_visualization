@@ -130,8 +130,6 @@ app.layout = html.Div(children=[
                 multi=True,
                 value='results_output_r_5runs_35716rows_balance_action.csv.csv'
 #                 placeholder="Select a dataset",
-                labelStyle={'font-family': 'Helvetica, monospace',
-                          'font-size': 20}
             ),
             
             html.P(
@@ -193,7 +191,9 @@ app.layout = html.Div(children=[
             ],
             values=['approval'],
             labelStyle={'display': 'inline-block',
-                       'margin-top': 20}
+                       'margin-top': 20,
+                        'font-family': 'Helvetica, monospace',
+                          'font-size': 20}
         ) 
     ], className='container-fluid'),
 
