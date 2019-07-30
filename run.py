@@ -89,9 +89,9 @@ app.layout = html.Div(children=[
     
 
     
-    html.Div(style={'backgroundColor': colors['background'], 'padding-left': 20, 'padding-top': 20}, children=[
+    html.Div([
         # Control panel
-        html.Div([
+        html.Div(style={'backgroundColor': colors['background'], 'padding-left': 20, 'padding-top': 20}, children=[
             
             
 #             dcc.Tab(
