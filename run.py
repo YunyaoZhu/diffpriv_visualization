@@ -89,84 +89,119 @@ app.layout = html.Div(children=[
     
 
     
-    html.Div(style={'backgroundColor': colors['background'], 'padding-left': 20}, children=[
+    html.Div(style={'backgroundColor': colors['background'], 'padding-left': 20, 'padding-top': 20}, children=[
         # Control panel
         html.Div([
             
-            html.P(
-                "Choose dataset:",
-                style={'font-family': 'Helvetica, monospace',
-                      'font-size': 20,
-                      'font-weight': 'bold'}
-            ),
+            
+            dcc.Tab(
+                            label='Interactions',
+                            value='control-tab-select2',
+                            children=html.Div(className='control-tab', children=[
 
-            dcc.Dropdown(
-                id="dataset-name",
-                 options=[{'label': 'Neural Net Balanced by Action', 
-                          'value': 'results_nn_4states_balanced_action_cv_output.csv.csv'},
-                        {'label': 'Neural Net Balanced by Action+Race', 
-                         'value': 'results_nn_4states_balanced_action_race_cv_output.csv.csv'},
-                        {'label': 'Neural Net Balanced by Race', 
-                         'value': 'results_nn_4states_balanced_race_cv_output.csv.csv'},
-                        {'label': 'Neural Net Balanced by Ethnicity', 
-                         'value': 'results_nn_4states_balanced_ethni_cv_output.csv.csv'},
-                        {'label': 'Neural Net Balanced by Sex', 
-                         'value': 'results_nn_4states_balanced_sex_cv_output.csv.csv'},
-                        {'label': 'Regression Balanced by Action', 
-                         'value': 'results_output_r_50runs_357160rows_balance_action2019-07-23_10-44-00.csv'},
-                        {'label': 'Regression Balanced by Action (non-binarized)', 
-                         'value': 'results_output_r_50runs_357160rows_balance_action_default_reg2019-07-26_14-51-32.csv'},
-                        {'label': 'Regression Balanced by Action+Race', 
-                         'value': 'results_output_r_50runs_209040rows_balance_action_race2019-07-22_17-43-09.csv'},
-                        {'label': 'Regression Balanced by Race', 
-                         'value': 'results_output_r_50runs_322142rows_balance_race2019-07-22_17-56-07.csv'},
-                        {'label': 'Regression Balanced by Ethnicity', 
-                         'value': 'results_output_r_50runs_99684rows_balance_ethni2019-07-22_17-19-46.csv'},
-                        {'label': 'Regression Balanced by Sex', 
-                         'value': 'results_output_r_50runs_630450rows_balance_sex2019-07-22_19-31-25.csv'},
-                        {'label': 'Regression Balanced by Action (test)', 
-                         'value': 'results_output_r_5runs_35716rows_balance_action.csv.csv'},],
+                                html.Div(
+                                    className='app-controls-name',
+                                    children='Event Metadata'
+                                ),
+                                html.P('Hover or click on data to see it here.'),
+                                html.Div(
+                                    id='alignment-events'
+                                )
+                            ]),
+                        ),
+            
+            
+            dcc.Tab(
+                label='Interactions',
+                value='control-tab-select2',
+                children=html.Div(className='control-tab', children=[
+
+                html.P(
+                    "Choose dataset:",
+                    style={'font-family': 'Helvetica, monospace',
+                          'font-size': 20,
+                          'font-weight': 'bold'}
+                ),
+
+                dcc.Dropdown(
+                    id="dataset-name",
+                     options=[{'label': 'Neural Net Balanced by Action', 
+                              'value': 'results_nn_4states_balanced_action_cv_output.csv.csv'},
+                            {'label': 'Neural Net Balanced by Action+Race', 
+                             'value': 'results_nn_4states_balanced_action_race_cv_output.csv.csv'},
+                            {'label': 'Neural Net Balanced by Race', 
+                             'value': 'results_nn_4states_balanced_race_cv_output.csv.csv'},
+                            {'label': 'Neural Net Balanced by Ethnicity', 
+                             'value': 'results_nn_4states_balanced_ethni_cv_output.csv.csv'},
+                            {'label': 'Neural Net Balanced by Sex', 
+                             'value': 'results_nn_4states_balanced_sex_cv_output.csv.csv'},
+                            {'label': 'Regression Balanced by Action', 
+                             'value': 'results_output_r_50runs_357160rows_balance_action2019-07-23_10-44-00.csv'},
+                            {'label': 'Regression Balanced by Action (non-binarized)', 
+                             'value': 'results_output_r_50runs_357160rows_balance_action_default_reg2019-07-26_14-51-32.csv'},
+                            {'label': 'Regression Balanced by Action+Race', 
+                             'value': 'results_output_r_50runs_209040rows_balance_action_race2019-07-22_17-43-09.csv'},
+                            {'label': 'Regression Balanced by Race', 
+                             'value': 'results_output_r_50runs_322142rows_balance_race2019-07-22_17-56-07.csv'},
+                            {'label': 'Regression Balanced by Ethnicity', 
+                             'value': 'results_output_r_50runs_99684rows_balance_ethni2019-07-22_17-19-46.csv'},
+                            {'label': 'Regression Balanced by Sex', 
+                             'value': 'results_output_r_50runs_630450rows_balance_sex2019-07-22_19-31-25.csv'},
+                            {'label': 'Regression Balanced by Action (test)', 
+                             'value': 'results_output_r_5runs_35716rows_balance_action.csv.csv'},],
 
 
-                multi=True,
-#                 value='results_output_r_5runs_35716rows_balance_action.csv.csv'
-                placeholder="Select dataset(s)",
+                    multi=True,
+    #                 value='results_output_r_5runs_35716rows_balance_action.csv.csv'
+                    placeholder="Select dataset(s)",
+                ),
+
+                html.P(
+                    "x-axis type:",
+                    style={'margin-top': 25,
+                          'font-family': 'Helvetica, monospace',
+                          'font-size': 20,
+                          'font-weight': 'bold'}
+                ),
+                dcc.RadioItems(
+                    id = 'xaxis-type',
+                    options=[{'label': i, 'value': i} for i in ['Log', 'Linear']],
+                    value='Log',
+                    labelStyle={'display': 'inline-block',
+                               'font-family': 'Helvetica, monospace',
+                              'font-size': 20}
+                ),
+                html.P(
+                    "Disparte impact metric:",
+                    style={'margin-top': 25,
+                          'font-family': 'Helvetica, monospace',
+                          'font-size': 20,
+                          'font-weight': 'bold'}
+                ),
+                dcc.Checklist(
+                    id = 'metric-checklist',
+                    options=[
+                        {'label': 'Approval', 'value': 'approval'},
+                        {'label': 'False Negative', 'value': 'fn'},
+                        {'label': 'False Positive', 'value': 'fp'}
+                    ],
+                    values=['approval'],
+                    labelStyle={'display': 'inline-block',
+                                'font-family': 'Helvetica, monospace',
+                                  'font-size': 20}
+                )   
+
+
+                    
+                    
+                    
+                ]),
             ),
             
-            html.P(
-                "x-axis type:",
-                style={'margin-top': 25,
-                      'font-family': 'Helvetica, monospace',
-                      'font-size': 20,
-                      'font-weight': 'bold'}
-            ),
-            dcc.RadioItems(
-                id = 'xaxis-type',
-                options=[{'label': i, 'value': i} for i in ['Log', 'Linear']],
-                value='Log',
-                labelStyle={'display': 'inline-block',
-                           'font-family': 'Helvetica, monospace',
-                          'font-size': 20}
-            ),
-            html.P(
-                "Disparte impact metric:",
-                style={'margin-top': 25,
-                      'font-family': 'Helvetica, monospace',
-                      'font-size': 20,
-                      'font-weight': 'bold'}
-            ),
-            dcc.Checklist(
-                id = 'metric-checklist',
-                options=[
-                    {'label': 'Approval', 'value': 'approval'},
-                    {'label': 'False Negative', 'value': 'fn'},
-                    {'label': 'False Positive', 'value': 'fp'}
-                ],
-                values=['approval'],
-                labelStyle={'display': 'inline-block',
-                            'font-family': 'Helvetica, monospace',
-                              'font-size': 20}
-            ) 
+            
+            
+            
+            
 
 
         ], className='five columns'),
