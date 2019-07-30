@@ -185,7 +185,7 @@ app.layout = html.Div(children=[
               [Input('tabs', 'value')])
 def render_content(tab):
     if tab == 'tab-1':
-        return html.Div('padding-top': 20, children=[
+        return html.Div(style={'padding-top': 20}, children=[
             html.P(
                 "Choose dataset:",
                 style={'font-family': 'Helvetica, monospace',
