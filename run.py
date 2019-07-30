@@ -31,13 +31,13 @@ app.config.supress_callback_exceptions = True
 
 '''Define colors'''
 colors = {
-    'background': '#D4DF9E',
+    'background': '#F7F9ED',
     'title': '#02140F',
     'text': '#00A676'
 }
 
 '''App layout'''
-app.layout = html.Div(children=[
+app.layout = html.Div(style={'backgroundColor': colors['background']}, children=[
     # title row
     html.Div([
         html.Div([
@@ -89,7 +89,7 @@ app.layout = html.Div(children=[
     
 
     
-    html.Div(style={'backgroundColor': colors['background']},children=[
+    html.Div([
         # Control panel
         html.Div([
             
