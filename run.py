@@ -97,8 +97,9 @@ app.layout = html.Div(style={'font-family': 'Helvetica, monospace'}, children=[
             # Settings and explanations tabs
             html.Div([
                 dcc.Tabs(id="tabs", value='tab-1', style={
+                    'font-family': 'Helvetica, monospace',
                     'font-size': 18,
-                    'height': 20
+                    'height': 30
                 },children=[
                     dcc.Tab(label='Graph settings', value='tab-1'),
                     dcc.Tab(label='Metrics', value='tab-2'),
@@ -157,6 +158,7 @@ def render_content(tab):
                 'Choose dataset(s):',
                 style={'font-family': 'Helvetica, monospace',
                       'font-size': 20,
+                       'margin-top': 15
                       }                
             ),
 
