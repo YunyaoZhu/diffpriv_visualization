@@ -442,7 +442,8 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
                 )
             ),
             'legend_orientation':"h",
-            'legend':dict(x=0, y=-0.8)
+            'legend':dict(x=0, y=-0.8),
+            'margin': {'l': 0, 'r': 0, 't': 0, 'b': 0}
         }
     }
     return figure
@@ -498,7 +499,8 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
                 )
             ),
             'legend_orientation':"h",
-            'legend':dict(x=0, y=-0.8)
+            'legend':dict(x=0, y=-0.8),
+            'margin': {'l': 0, 'r': 0, 't': 0, 'b': 0}
         }
     }
     return figure
