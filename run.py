@@ -97,7 +97,6 @@ app.layout = html.Div(style={'font-family': 'Helvetica, monospace'}, children=[
             # Settings and explanations tabs
             html.Div([
                 dcc.Tabs(id="tabs", value='tab-1', style={
-                    'width': '50%',
                     'font-size': 18,
                     'height': 20
                 },children=[
