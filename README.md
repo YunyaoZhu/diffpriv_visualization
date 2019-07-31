@@ -1,3 +1,4 @@
-# Deploying Plotly-Dash To Heroku
-win 10 64-bit <br>
-python 3.6
+# Interactive Dash for Data Visualization
+## AUC and Disparate Impact plots
+Project: Protecting Individual Privacy Using Differential Privacy (Duke Summer Ungraduate Projects in Computer Science)
+
