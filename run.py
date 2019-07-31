@@ -447,9 +447,9 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
             'shape': dict(
                 type="line",
                 x0=2,
-                y0=1.2,
+                y0=0.8,
                 x1=0.0625,
-                y1=1.2,
+                y1=0.8,
                 line=dict(
                     color="RoyalBlue",
                     width=3
