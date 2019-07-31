@@ -202,7 +202,7 @@ def render_content(tab):
                               'font-size': 16}
             )
         ])
-    if tab == 'tab-2':
+    elif tab == 'tab-2':
         return html.Div(style={'padding-top': 20, 'font-family': 'Helvetica, monospace',}, children=[
             html.H6(
                 'AUC',
@@ -285,7 +285,8 @@ def update_image_src(dataset_filename, dataset_options, xaxis_type):
                 color='#7f7f7f'
                 ),
                 type ='linear' if xaxis_type == 'Linear' else 'log',
-                autorange='reversed'
+                autorange='reversed',
+                showgrid=False
 
             ),
             'yaxis' : dict(
