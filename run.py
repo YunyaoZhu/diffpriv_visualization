@@ -389,7 +389,7 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
             'shapes': [{'type': 'line',
                         'x0': 2,
                         'y0': 0.8,
-                        'x1': 0.0625,
+                        'x1': 0.05,
                         'y1': 0.8,
                         'line': {
                             'color': colors['grey'],
@@ -401,7 +401,7 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
                       {'type': 'line',
                         'x0': 2,
                         'y0': 1.2,
-                        'x1': 0.0625,
+                        'x1': 0.05,
                         'y1': 1.2,
                         'line': {
                             'color': colors['grey'],
@@ -471,7 +471,7 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
             'shapes': [{'type': 'line',
                         'x0': 2,
                         'y0': 0.8,
-                        'x1': 0.0625,
+                        'x1': 0.05,
                         'y1': 0.8,
                         'line': {
                             'color': colors['grey'],
@@ -483,7 +483,7 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
                       {'type': 'line',
                         'x0': 2,
                         'y0': 1.2,
-                        'x1': 0.0625,
+                        'x1': 0.05,
                         'y1': 1.2,
                         'line': {
                             'color': colors['grey'],
@@ -551,7 +551,7 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
             'shapes': [{'type': 'line',
                         'x0': 2,
                         'y0': 0.8,
-                        'x1': 0.0625,
+                        'x1': 0.05,
                         'y1': 0.8,
                         'line': {
                             'color': colors['grey'],
@@ -563,7 +563,7 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
                       {'type': 'line',
                         'x0': 2,
                         'y0': 1.2,
-                        'x1': 0.0625,
+                        'x1': 0.05,
                         'y1': 1.2,
                         'line': {
                             'color': colors['grey'],
