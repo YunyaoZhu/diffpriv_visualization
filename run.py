@@ -385,7 +385,30 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
 
             'legend_orientation':"h",
             'legend':dict(x=0, y=-0.8),
-            'margin': {'r': 0}
+            'margin': {'r': 0},
+            'shapes': [{'type': 'line',
+                        'x0': 2,
+                        'y0': 0.8,
+                        'x1': 0.0625,
+                        'y1': 0.8,
+                        'line': {
+                            'color': colors['grey'],
+                            'width': 3,
+                            'dash': 'dot'
+                            },
+                        },
+                      
+                      {'type': 'line',
+                        'x0': 2,
+                        'y0': 1.2,
+                        'x1': 0.0625,
+                        'y1': 1.2,
+                        'line': {
+                            'color': colors['grey'],
+                            'width': 3,
+                            'dash': 'dot'
+                            },
+                        }],
         }
     }
     return figure
@@ -444,10 +467,7 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
             ),
             'legend_orientation':"h",
             'legend':dict(x=0, y=-0.8),
-            'margin': {'l': 5, 'r': 0},
-            
-            
-            
+            'margin': {'r': 0},
             'shapes': [{'type': 'line',
                         'x0': 2,
                         'y0': 0.8,
@@ -456,6 +476,7 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
                         'line': {
                             'color': colors['grey'],
                             'width': 3,
+                            'dash': 'dot'
                             },
                         },
                       
@@ -467,14 +488,9 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
                         'line': {
                             'color': colors['grey'],
                             'width': 3,
-                            'dash': 'dashdot'
+                            'dash': 'dot'
                             },
                         }],
-            
-            
-            
-            
-            
         }
     }
     return figure
@@ -531,7 +547,30 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
             ),
             'legend_orientation':"h",
             'legend':dict(x=0, y=-0.8),
-            'margin': {'l': 2, 'r': 0}
+            'margin': {'r': 0},
+            'shapes': [{'type': 'line',
+                        'x0': 2,
+                        'y0': 0.8,
+                        'x1': 0.0625,
+                        'y1': 0.8,
+                        'line': {
+                            'color': colors['grey'],
+                            'width': 3,
+                            'dash': 'dot'
+                            },
+                        },
+                      
+                      {'type': 'line',
+                        'x0': 2,
+                        'y0': 1.2,
+                        'x1': 0.0625,
+                        'y1': 1.2,
+                        'line': {
+                            'color': colors['grey'],
+                            'width': 3,
+                            'dash': 'dot'
+                            },
+                        }],
         }
     }
     return figure
