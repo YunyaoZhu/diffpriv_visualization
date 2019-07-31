@@ -301,7 +301,7 @@ def update_image_src(dataset_filename, dataset_options, xaxis_type):
                 index = i
         labelname=dataset_options[index]['label']
         df = pd.read_csv(DATA_PATH.joinpath(filename))
-        data.append({'x': range(len(df.eps.values)), 'y': df.auc.values, 'type': 'scatter', 'name': labelname})
+        data.append({'x': df.eps.values, 'y': df.auc.values, 'type': 'scatter', 'name': labelname})
         
     figure = {
         'data': data,
