@@ -293,6 +293,7 @@ def render_content(tab):
      dash.dependencies.Input('xaxis-type', 'value')])
 def update_image_src(dataset_filename, dataset_options, xaxis_type):
     data = []
+    auc_inf = []
     for filename in dataset_filename:
         index = len(dataset_options)-1
         for i in range(len(dataset_options)):
@@ -302,6 +303,7 @@ def update_image_src(dataset_filename, dataset_options, xaxis_type):
         labelname=dataset_options[index]['label']
         df = pd.read_csv(DATA_PATH.joinpath(filename))
         data.append({'x': df.eps.values, 'y': df.auc.values, 'type': 'scatter', 'name': labelname})
+        auc_inf.append(df.auc.values[0])
         
     figure = {
         'data': data,
@@ -318,8 +320,8 @@ def update_image_src(dataset_filename, dataset_options, xaxis_type):
                 type ='linear' if xaxis_type == 'Linear' else 'log',
                 autorange='reversed',
                 showgrid=False,
-                tickvals=[np.inf, 2, 1, 0.5, 0.25, 0.125, 0.0625],
-                ticktext=['inf', '2', '1', '0.5', '0.25', '0.125', '0.0625']
+                tickvals=[2, 1, 0.5, 0.25, 0.125, 0.0625],
+#                 ticktext=['inf', '2', '1', '0.5', '0.25', '0.125', '0.0625']
 
             ),
             'yaxis' : dict(
@@ -331,6 +333,17 @@ def update_image_src(dataset_filename, dataset_options, xaxis_type):
             ),
             'legend_orientation':"h",
             'legend':dict(x=-0, y=-0.8),
+            'shapes': [{'type': 'line',
+                        'x0': 2,
+                        'y0': item,
+                        'x1': 0.05,
+                        'y1': item,
+                        'line': {
+                            'color': colors['grey'],
+                            'width': 3,
+                            'dash': 'dot'
+                            },
+                        } for item in auc_inf],
             
         }
     }
