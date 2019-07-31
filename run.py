@@ -118,8 +118,9 @@ app.layout = html.Div(style={'font-family': 'Helvetica, monospace'}, children=[
     ], className='row'),
     
     
+    
     html.Div([
-        html.Div([
+        html.Div(style={'margin': {'l': 0, 'r': 0, 't': 0, 'b': 0}}, children=[
             
              dcc.Graph(id='race_di'),
             
