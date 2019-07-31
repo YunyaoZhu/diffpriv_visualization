@@ -33,7 +33,7 @@ app.config.supress_callback_exceptions = True
 colors = {
     'background': '#F8FBF9',
     'white': '#ffffff',
-    'grey': '#A2A3A1'
+    'grey': '#A2A3A1',
     'title': '#02140F',
     'text': '#00A676'
 }
