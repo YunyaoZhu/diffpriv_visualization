@@ -318,7 +318,7 @@ def update_image_src(dataset_filename, dataset_options, xaxis_type):
                 type ='linear' if xaxis_type == 'Linear' else 'log',
                 autorange='reversed',
                 showgrid=False,
-                tickvals=[2, 1, 0.5, 0.25, 0.125, 0.0625]
+                tickvals=[df.inf, 2, 1, 0.5, 0.25, 0.125, 0.0625]
 
             ),
             'yaxis' : dict(
