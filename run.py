@@ -377,10 +377,11 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
             'yaxis' : dict(
                 title='DI',
                 titlefont=dict(
-                family='Helvetica, monospace',
-                size=15,
-                color='#7f7f7f'
-                )
+                    family='Helvetica, monospace',
+                    size=15,
+                    color='#7f7f7f'
+                    ),
+                tickvals=[0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6]
             ),
 
             'legend_orientation':"h",
@@ -460,14 +461,14 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
             'yaxis' : dict(
                 title='DI',
                 titlefont=dict(
-                family='Helvetica, monospace',
-                size=15,
-                color='#7f7f7f'
-                )
+                    family='Helvetica, monospace',
+                    size=15,
+                    color='#7f7f7f'
+                    ),
             ),
             'legend_orientation':"h",
             'legend':dict(x=0, y=-0.8),
-            'margin': {'r': 0},
+            'margin': {'l': 0, 'r': 0},
             'shapes': [{'type': 'line',
                         'x0': 2,
                         'y0': 0.8,
@@ -547,7 +548,7 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
             ),
             'legend_orientation':"h",
             'legend':dict(x=0, y=-0.8),
-            'margin': {'r': 0},
+            'margin': {'l': 0, 'r': 0},
             'shapes': [{'type': 'line',
                         'x0': 2,
                         'y0': 0.8,
