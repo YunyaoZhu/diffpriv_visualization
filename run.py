@@ -341,7 +341,7 @@ def update_image_src(dataset_filename, dataset_options, xaxis_type):
                         'line': {
                             'color': colors['grey'],
                             'width': 3,
-#                             'dash': 'dot'
+                            'dash': 'dot'
                             },
                         } for item in auc_inf],
             
