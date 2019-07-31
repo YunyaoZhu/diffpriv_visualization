@@ -99,7 +99,7 @@ app.layout = html.Div(style={'font-family': 'Helvetica, monospace'}, children=[
                 dcc.Tabs(id="tabs", value='tab-1', style={
                     'font-family': 'Helvetica, monospace',
                     'font-size': 18,
-                    'height': 45
+#                     'height': 45
                 },children=[
                     dcc.Tab(label='Graph settings', value='tab-1'),
                     dcc.Tab(label='Metrics', value='tab-2'),
