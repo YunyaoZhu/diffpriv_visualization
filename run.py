@@ -120,7 +120,7 @@ app.layout = html.Div(style={'font-family': 'Helvetica, monospace'}, children=[
     
     
     html.Div([
-        html.Div(style={'margin': {'l': 0, 'r': 0, 't': 0, 'b': 0}}, children=[
+        html.Div(style={'margin': {'l': 0, 'r': 0}}, children=[
             
              dcc.Graph(id='race_di'),
             
