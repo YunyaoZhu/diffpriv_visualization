@@ -108,14 +108,38 @@ app.layout = html.Div(style={'font-family': 'Helvetica, monospace'}, children=[
             dcc.Graph(
                 id='auc',
             ),
-           dcc.Graph(id='race_di'),
+#            dcc.Graph(id='race_di'),
 
-           dcc.Graph(id='eth_di'),
+#            dcc.Graph(id='eth_di'),
 
-           dcc.Graph(id='sex_di'),
+#            dcc.Graph(id='sex_di'),
 
         ], className='seven columns'),
     ], className='row'),
+    
+    
+    html.Div([
+        html.Div([
+            
+             dcc.Graph(id='race_di'),
+            
+        ], className='five columns'),
+        
+        html.Div([
+            
+            dcc.Graph(id='eth_di'),
+             
+        ], className='five columns'),
+        
+        html.Div([
+            
+            dcc.Graph(id='sex_di'),
+             
+        ], className='five columns'),
+        
+    ], className='row'),
+    
+    
 ], className='ten columns offset-by-one')
 
 '''Callbacks'''
