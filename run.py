@@ -444,28 +444,24 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
             'legend_orientation':"h",
             'legend':dict(x=0, y=-0.8),
             'margin': {'l': 5, 'r': 0},
-            'shape': dict(
-                type="line",
-                x0=1,
-                y0=0.8,
-                x1=2,
-                y1=0.8,
-                line=dict(
-                    color="RoyalBlue",
-                    width=3
-                    )
-                ),
-            'shape': dict(
-                type="line",
-                x0=1,
-                y0=1.2,
-                x1=2,
-                y1=1.2,
-                line=dict(
-                    color="RoyalBlue",
-                    width=3
-                    )
-                )
+            
+            
+            
+            'shapes': [{'type': 'line',
+                        'x0': 2,
+                        'y0': 0,
+                        'x1': 0.0625,
+                        'y1': 2,
+                        'line': {
+                            'color': 'rgb(55, 128, 191)',
+                            'width': 3,
+                            },
+                        }],
+            
+            
+            
+            
+            
         }
     }
     return figure
