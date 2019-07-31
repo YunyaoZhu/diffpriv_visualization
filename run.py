@@ -123,19 +123,19 @@ app.layout = html.Div(style={'font-family': 'Helvetica, monospace'}, children=[
             
              dcc.Graph(id='race_di'),
             
-        ], className='five columns'),
+        ], className='four columns'),
         
         html.Div([
             
             dcc.Graph(id='eth_di'),
              
-        ], className='five columns'),
+        ], className='four columns'),
         
         html.Div([
             
             dcc.Graph(id='sex_di'),
              
-        ], className='five columns'),
+        ], className='four columns'),
         
     ], className='row'),
     
