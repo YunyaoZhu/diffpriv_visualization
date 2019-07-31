@@ -446,10 +446,21 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
             'margin': {'l': 5, 'r': 0},
             'shape': dict(
                 type="line",
-                x0=2,
+                x0=1,
                 y0=0.8,
-                x1=0.0625,
+                x1=2,
                 y1=0.8,
+                line=dict(
+                    color="RoyalBlue",
+                    width=3
+                    )
+                ),
+            'shape': dict(
+                type="line",
+                x0=1,
+                y0=1.2,
+                x1=2,
+                y1=1.2,
                 line=dict(
                     color="RoyalBlue",
                     width=3
