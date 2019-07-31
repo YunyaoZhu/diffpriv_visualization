@@ -33,6 +33,7 @@ app.config.supress_callback_exceptions = True
 colors = {
     'background': '#F8FBF9',
     'white': '#ffffff',
+    'grey': '#A2A3A1'
     'title': '#02140F',
     'text': '#00A676'
 }
@@ -449,12 +450,24 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
             
             'shapes': [{'type': 'line',
                         'x0': 2,
-                        'y0': 0,
+                        'y0': 0.8,
                         'x1': 0.0625,
-                        'y1': 2,
+                        'y1': 0.8,
                         'line': {
-                            'color': 'rgb(55, 128, 191)',
+                            'color': colors['grey'],
                             'width': 3,
+                            },
+                        },
+                      
+                      {'type': 'line',
+                        'x0': 2,
+                        'y0': 1.2,
+                        'x1': 0.0625,
+                        'y1': 1.2,
+                        'line': {
+                            'color': colors['grey'],
+                            'width': 3,
+                            'dash': 'dashdot'
                             },
                         }],
             
