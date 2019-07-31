@@ -459,12 +459,13 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
 
             ),
             'yaxis' : dict(
-                title='DI',
+#                 title='DI',
                 titlefont=dict(
                     family='Helvetica, monospace',
                     size=15,
                     color='#7f7f7f'
                     ),
+                tickvals=[0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6]
             ),
             'legend_orientation':"h",
             'legend':dict(x=0, y=-0.8),
@@ -539,12 +540,13 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
                 tickvals=[2, 1, 0.5, 0.25, 0.125, 0.0625]
             ),
             'yaxis' : dict(
-                title='DI',
+#                 title='DI',
                 titlefont=dict(
-                family='Helvetica, monospace',
-                size=15,
-                color='#7f7f7f'
-                )
+                    family='Helvetica, monospace',
+                    size=15,
+                    color='#7f7f7f'
+                    ),
+                tickvals=[0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6]
             ),
             'legend_orientation':"h",
             'legend':dict(x=0, y=-0.8),
