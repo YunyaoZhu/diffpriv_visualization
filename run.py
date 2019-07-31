@@ -345,7 +345,8 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
                 ),
                 type ='linear' if xaxis_type == 'Linear' else 'log',
                 autorange='reversed',
-                showgrid=False
+                showgrid=False,
+                tickvals=[2, 1, 0.5, 0.25, 0.125, 0.0625]
             ),
             'yaxis' : dict(
                 title='DI',
@@ -402,7 +403,8 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
                 ),
                 type ='linear' if xaxis_type == 'Linear' else 'log',
                 autorange='reversed',
-                showgrid=False
+                showgrid=False,
+                tickvals=[2, 1, 0.5, 0.25, 0.125, 0.0625]
 
             ),
             'yaxis' : dict(
@@ -458,7 +460,8 @@ def update_image_src(dataset_filename, dataset_options, metric_checklist, xaxis_
                 color='#7f7f7f'),
                 type ='linear' if xaxis_type == 'Linear' else 'log',
                 autorange='reversed',
-                showgrid=False
+                showgrid=False,
+                tickvals=[2, 1, 0.5, 0.25, 0.125, 0.0625]
             ),
             'yaxis' : dict(
                 title='DI',
