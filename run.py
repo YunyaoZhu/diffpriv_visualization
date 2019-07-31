@@ -187,7 +187,9 @@ def render_content(tab):
                         {'label': 'Regression Balanced by Sex', 
                          'value': 'results_output_r_50runs_630450rows_balance_sex2019-07-22_19-31-25.csv'},
                         {'label': 'Regression Balanced by Action (test)', 
-                         'value': 'results_output_r_5runs_35716rows_balance_action.csv.csv'},],
+                         'value': 'results_output_r_5runs_35716rows_balance_action.csv.csv'},
+                        {'label': 'Regression Balanced by Action+Race (non-binarized)',
+                         'value': 'results_output_r_50runs_209040rows_balance_action_race_default_reg2019-07-28_19-45-08.csv'}],
 
 
                 multi=True,
@@ -246,7 +248,8 @@ def render_content(tab):
                 "AUC is the area under the ROC curve. \
                 The ROC curve is the receiver operating characteristic curve. \
                 AUC is the area between the ROC curve and the x-axis. \
-                The closer AUC is to 1, the better the model utility.",
+                The closer AUC is to 1, the better the model is at \
+                distinguishing between classes.",
                 style={'font-family': 'Helvetica, monospace',
                       'font-size': 16}
             ),
